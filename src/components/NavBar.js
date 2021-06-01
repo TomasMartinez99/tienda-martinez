@@ -1,0 +1,36 @@
+import React from 'react';
+
+function NavBar() {
+    return <>
+        <header>
+            <div className="fixed">
+                <nav className="menu">
+                    {/* Logo tienda */}
+                    <div className="logo">
+                        <p>Tienda Martinez</p>
+                    </div>
+                    {/* Buscador */}
+                    <div className="buscador">
+                        <input type="text" placeholder="Buscar..."></input>
+                        <i class="fas fa-search"></i>
+                    </div>
+                    {/* Enlaces */}
+                    <ul className="enlaces">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Categorias</a></li>
+                        <li><a href="#">Productos</a></li>
+                    </ul>
+                    {/* Btn iniciar sesion */}
+                    <a href="#" className="btn btn-outline-light">Iniciar sesión</a>
+                </nav>
+                {/* Buscador 2 */}
+                <div className="buscador-2">
+                    <input type="text" placeholder="Buscar..."></input>
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </header>
+    </>
+}
+
+export default NavBar;
