@@ -1,6 +1,7 @@
 import React from 'react';
+import CartWidget from './CartWidget';
 
-function NavBar() {
+export const NavBar = () => {
     return <>
         <header>
             <div className="fixed">
@@ -20,6 +21,8 @@ function NavBar() {
                         <li><a href="#">Categorias</a></li>
                         <li><a href="#">Productos</a></li>
                     </ul>
+                    {/* Carrito */}
+                    <CartWidget/>
                     {/* Btn iniciar sesion */}
                     <a href="#" className="btn btn-outline-light">Iniciar sesión</a>
                 </nav>

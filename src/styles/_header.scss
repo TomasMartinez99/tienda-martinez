@@ -79,6 +79,36 @@ header {
                 background-color: $color-secundario;
             }
         }
+        .carrito-contenedor {
+            position: relative;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            .contador {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                background-color: green;
+                top: -4px;
+                right: -4px;
+                p {
+                    font-size: 0.9em;
+                    color: #fff;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+            .fa-shopping-bag {
+                color: #fff;
+                font-size: 2em;
+            }
+            &:hover {
+                transform: scale(1.1, 1.1);
+            }
+        }
     }
     .buscador-2 {
         display: none;
