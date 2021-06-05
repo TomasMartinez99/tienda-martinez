@@ -10,19 +10,23 @@ export const NavBar = () => {
                     <div className="logo">
                         <p>Tienda Martinez</p>
                     </div>
+                    
                     {/* Buscador */}
                     <div className="buscador">
                         <input type="text" placeholder="Buscar..."></input>
                         <i class="fas fa-search"></i>
                     </div>
+                    
                     {/* Enlaces */}
                     <ul className="enlaces">
                         <li><a href="#">Inicio</a></li>
                         <li><a href="#">Categorias</a></li>
                         <li><a href="#">Productos</a></li>
                     </ul>
+                    
                     {/* Carrito */}
                     <CartWidget/>
+
                     {/* Btn iniciar sesion */}
                     <a href="#" className="btn btn-outline-light">Iniciar sesión</a>
                 </nav>
