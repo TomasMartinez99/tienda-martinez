@@ -14,7 +14,7 @@ export const NavBar = () => {
                     {/* Buscador */}
                     <div className="buscador">
                         <input type="text" placeholder="Buscar..."></input>
-                        <i class="fas fa-search"></i>
+                        <i className="fas fa-search"></i>
                     </div>
                     
                     {/* Enlaces */}
@@ -33,7 +33,7 @@ export const NavBar = () => {
                 {/* Buscador 2 */}
                 <div className="buscador-2">
                     <input type="text" placeholder="Buscar..."></input>
-                    <i class="fas fa-search"></i>
+                    <i className="fas fa-search"></i>
                 </div>
             </div>
         </header>

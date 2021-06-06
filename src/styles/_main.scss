@@ -1,0 +1,22 @@
+.main {
+    h2 {
+        text-align: center;
+        margin: 30px 0px;
+    }
+    .agregarCarrito {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        width: auto;
+        margin: 0 auto;
+        input {
+            text-align: center;
+            width: 50px;
+        }
+        button {
+            width: 40px;
+            border: none;
+        }
+    }
+}
