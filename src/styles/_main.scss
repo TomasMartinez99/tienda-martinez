@@ -6,17 +6,43 @@
     .agregarCarrito {
         display: flex;
         flex-direction: row;
-        align-content: center;
         justify-content: center;
+        align-items: center;
         width: auto;
         margin: 0 auto;
         input {
             text-align: center;
             width: 50px;
+            border: 1px solid #e4e4e4;
+            height: 2.54em;
+            outline: none;
         }
         button {
             width: 40px;
             border: none;
+            outline: none;
+            background-color: #e4e4e4;
+            color: $color-primario;
+            font-size: 1.20em;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            height: 2.1em;
+            &:hover {
+                background-color: $color-secundario;
+                color: #fff;
+            }
+        }
+        p {
+            margin: 0;
+            padding: 0.46em;
+            border: 1px solid $color-primario;
+            color:$color-primario;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            &:hover {
+                color: #fff;
+                background-color: $color-secundario;
+            }
         }
     }
 }
