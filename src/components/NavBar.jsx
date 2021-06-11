@@ -8,7 +8,7 @@ export const NavBar = () => {
                 <nav className="menu">
                     {/* Logo tienda */}
                     <div className="logo">
-                        <p>Tienda Martinez</p>
+                        <p>SmartWatches</p>
                     </div>
                     
                     {/* Buscador */}
