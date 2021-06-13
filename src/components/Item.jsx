@@ -1,32 +1,35 @@
 import React, {useState, useEffect} from 'react';
 
+// Array con relojes
+const relojes = [{
+    id: 1,
+    title: 'Smartwatch Samsung 1',
+    price: 25000,
+    pictureUrl: '../public/img/relojes/reloj-samsung-1.png',
+    alt: 'Smartwatch Samsung 1'
+},
+{
+    id: 2,
+    title: 'Smartwatch Samsung 2',
+    price: 25000,
+    pictureUrl: '../public/img/relojes/reloj-samsung-2.png',
+    alt: 'Smartwatch Samsung 2'
+},
+{
+    id: 3,
+    title: 'Smartwatch Apple watch 1',
+    price: 25000,
+    pictureUrl: '../public/img/relojes/apple-watch-1.png',
+    alt: 'Smartwatch Apple watch 1'
+}]
+
 // Promise
 const promiseItem = () => {
     return new Promise ((resolve, reject) => {
-        setTimeout(() => resolve(
+        setTimeout(() => {
             // Si está todo ok se muestra el resolve
-            [{
-                id: 1,
-                title: 'Smartwatch Samsung 1',
-                price: 25000,
-                pictureUrl: '../public/img/relojes/reloj-samsung-1.png',
-                alt: 'Smartwatch Samsung 1'
-            },
-            {
-                id: 2,
-                title: 'Smartwatch Samsung 2',
-                price: 25000,
-                pictureUrl: '../public/img/relojes/reloj-samsung-2.png',
-                alt: 'Smartwatch Samsung 2'
-            },
-            {
-                id: 3,
-                title: 'Smartwatch Apple watch 1',
-                price: 25000,
-                pictureUrl: '../public/img/relojes/apple-watch-1.png',
-                alt: 'Smartwatch Apple watch 1'
-            }]
-        ), 2000)
+            resolve(relojes);
+        }, 2000)
     })
 };
 
@@ -43,6 +46,10 @@ export const Item = props => {
     useEffect(() => {
         ejecutarItem();
     }, [])
+
+    return <>
+        
+    </>
 }
 
 export default Item;

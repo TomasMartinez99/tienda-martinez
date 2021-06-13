@@ -4,7 +4,7 @@ import Item from './Item';
 export const ItemList = props => {
     return <>
         <Item>
-            {props.dataToShow.lenght == 0 ? (
+            {props.dataToShow.length == 0 ? (
                 <h1>Cargando...</h1>
             ) : (
                 <>
