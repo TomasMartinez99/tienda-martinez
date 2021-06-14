@@ -49,4 +49,49 @@
             }
         }
     }
+
+    .row {
+        .smartwatches-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding-top: 3em;
+            padding-bottom: 3em;
+            width: 100%;
+            article {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                border-radius: 20px;
+                margin: 20px;
+                width: 16em;
+                box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.16);
+                img {
+                    width: 60%;
+                    border-bottom: 1px solid $color-primario;
+                    margin-bottom: 0.8em;
+                }
+                h3 {
+                    font-size: 1em;
+                    color: $color-secundario;
+                }
+                .btn-outline-primary {
+                    margin-top: 8px;
+                    margin-bottom: 18px;
+                    border-radius: 50px;
+                    color: $color-primario;
+                    border: 1px solid $color-secundario;
+                    &:hover {
+                        color: #fff;
+                        border: 1px solid $color-secundario;
+                        background-color: $color-secundario;
+                    }
+                }
+            }
+        }
+    }
 }
