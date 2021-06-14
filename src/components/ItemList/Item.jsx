@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-// Render
+// Componente Render
 export const Item = (props) => {
   return (
-    <article className="col-3">
+    <article className="item col-3">
       <img src={props.pictureUrl} alt={props.alt} />
       <h3>{props.title}</h3>
       <h4>${props.price}</h4>

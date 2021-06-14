@@ -6,7 +6,7 @@
     .agregarCarrito {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
         width: auto;
         margin: 0 auto;
@@ -43,53 +43,73 @@
             color:$color-primario;
             cursor: pointer;
             transition: all 0.3s ease;
+            border-radius: 0px 25px 25px 0px;
             &:hover {
                 color: #fff;
                 background-color: $color-secundario;
             }
         }
     }
-
-    .row {
-        .smartwatches-container {
+    .smartwatches-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding-top: 3em;
+        padding-bottom: 3em;
+        width: 100%;
+        .item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border-radius: 20px;
+            margin: 20px;
+            width: 16em;
+            box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.16);
+            img {
+                width: 60%;
+                border-bottom: 1px solid $color-primario;
+                margin-bottom: 0.8em;
+            }
+            h3 {
+                font-size: 1em;
+                color: $color-secundario;
+            }
+            .btn-outline-primary {
+                margin-top: 8px;
+                margin-bottom: 18px;
+                border-radius: 50px;
+                color: $color-primario;
+                border: 1px solid $color-secundario;
+                &:hover {
+                    color: #fff;
+                    border: 1px solid $color-secundario;
+                    background-color: $color-secundario;
+                }
+            }
+        }
+        .itemDetail {
             display: flex;
             flex-direction: row;
+            justify-content: center;
             align-items: center;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            padding-top: 3em;
-            padding-bottom: 3em;
-            width: 100%;
-            article {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+            overflow: hidden;
+            height: 400px;
+            .img-product {
                 overflow: hidden;
-                border-radius: 20px;
-                margin: 20px;
-                width: 16em;
-                box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.16);
                 img {
-                    width: 60%;
-                    border-bottom: 1px solid $color-primario;
-                    margin-bottom: 0.8em;
-                }
-                h3 {
-                    font-size: 1em;
-                    color: $color-secundario;
-                }
-                .btn-outline-primary {
-                    margin-top: 8px;
-                    margin-bottom: 18px;
-                    border-radius: 50px;
-                    color: $color-primario;
-                    border: 1px solid $color-secundario;
+                    transition: all 0.3s ease;
                     &:hover {
-                        color: #fff;
-                        border: 1px solid $color-secundario;
-                        background-color: $color-secundario;
+                        transform: scale(1.2, 1.2);
                     }
+                }
+            }
+            .detail-product {
+                h3 {
+                    font-weight: bold;
                 }
             }
         }
