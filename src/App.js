@@ -1,8 +1,8 @@
 import React from 'react';
 import './styles/index.scss';
 import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemList/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
+import ItemDetailContainer from './components/views/ItemDetailContainer/ItemDetailContainer';
+import ItemListContainer from './components/views/ItemListContainer/ItemListContainer';
 
 function App() {
   return <>

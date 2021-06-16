@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ItemDetail from "./ItemDetail";
+import ItemDetail from "./components/ItemDetail";
 
 export const ItemDetailContainer = (props) => {
   // Array con relojes

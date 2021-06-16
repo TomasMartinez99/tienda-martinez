@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ItemList from "./ItemList";
-/* import ItemCount from "..ItemCount/"; */
+import ItemList from "./components/ItemList";
 
 export const ItemListContainer = (props) => {
   // Array con relojes
@@ -86,7 +85,6 @@ export const ItemListContainer = (props) => {
   return (
     <div className="main">
       <ItemList dataToShow={dataToShow} />
-      {/* <ItemCount stock={5} initial={1} /> */}
     </div>
   );
 };
