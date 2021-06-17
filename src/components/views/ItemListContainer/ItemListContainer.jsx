@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ItemList from "./components/ItemList";
+import ItemList from "./dummy/ItemList";
 
 export const ItemListContainer = (props) => {
   // Array con relojes
@@ -73,18 +73,18 @@ export const ItemListContainer = (props) => {
   };
 
   // Hook useState
-  const [dataToShow, setDataToShow] = useState([]);
+  const [watchesToShow, setWatchesToShow] = useState([]);
 
   // Hook useEffect (cada vez que se ejecuta este componente)
   useEffect(() => {
     promiseItem().then((smartwatches) => {
-      setDataToShow(smartwatches);
+      setWatchesToShow(smartwatches);
     });
   }, []);
 
   return (
     <div className="main">
-      <ItemList dataToShow={dataToShow} />
+      <ItemList watchesToShow={watchesToShow} />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import ItemCount from "../../../ItemCount";
+import ItemCount from "../ItemCount";
 
 // Componente Render
 export const Item = (props) => {
