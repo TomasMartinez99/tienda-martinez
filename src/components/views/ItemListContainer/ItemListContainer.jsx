@@ -83,9 +83,16 @@ export const ItemListContainer = (props) => {
 
   // Hook useState
   const [watchesToShow, setWatchesToShow] = useState([]);
+  const [filter, setFilter] = useState("");
 
   // useParams (parámetros que recibo por url)
   const { categoryId } = useParams();
+
+  const filterSmartwatches = (data) => {
+    return filter === ""
+      ? data
+      : data.filter((smartwatch) => smartwatch.brand === filter);
+  };
 
   // Hook useEffect (cada vez que se ejecuta este componente)
   useEffect(() => {
@@ -99,7 +106,7 @@ export const ItemListContainer = (props) => {
 
   return (
     <div className="main">
-      <ItemList watchesToShow={watchesToShow} />
+      <ItemList watchesToShow={filterSmartwatches(watchesToShow)} />
     </div>
   );
 };

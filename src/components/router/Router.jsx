@@ -12,19 +12,19 @@ export const Router = () => {
         {/* Inicio */}
         {/* <Route exact path="/" component={ItemListContainer} /> */}
         <Route exact path="/">
-          <h2>Inicio</h2>
+          <h3>Inicio</h3>
           <ItemListContainer />
         </Route>
 
         {/* Marcas */}
         <Route exact path="/category/:categoryId">
-          <h2>Marcas disponibles</h2>
+          <h3>Marcas disponibles</h3>
           <ItemListContainer />
         </Route>
 
         {/* Detalle producto */}
         <Route exact path="/item/:id">
-          <h2>Detalle producto</h2>
+          <h3>Detalle producto</h3>
           {/* <ItemDetailContainer /> */}
         </Route>
 
