@@ -1,15 +1,12 @@
 import React from 'react';
 import './styles/index.scss';
-import NavBar from './components/NavBar';
-import ItemDetailContainer from './components/views/ItemDetailContainer/ItemDetailContainer';
-import ItemListContainer from './components/views/ItemListContainer/ItemListContainer';
+import { BrowserRouter } from "react-router-dom";
+import { Router } from './components/router/Router';
 
 function App() {
-  return <>
-    <NavBar/>
-    <ItemListContainer/>
-    <ItemDetailContainer/>
-  </>
+  return <BrowserRouter>
+      <Router/>
+  </BrowserRouter>
 }
 
 export default App;

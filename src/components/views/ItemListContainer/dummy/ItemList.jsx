@@ -13,13 +13,7 @@ export const ItemList = ({ watchesToShow }) => {
         <div className="row">
           <div className="smartwatches-container">
             {watchesToShow.map((smartwatch) => (
-              <Item
-                key={smartwatch.id}
-                title={smartwatch.title}
-                price={smartwatch.price}
-                pictureUrl={smartwatch.pictureUrl}
-                alt={smartwatch.alt}
-              />
+              <Item {...smartwatch} />
             ))}
           </div>
         </div>

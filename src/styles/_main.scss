@@ -39,17 +39,21 @@
                 color: #fff;
             }
         }
-        p {
-            margin: 0;
-            padding: 0.39em;
-            border: 1px solid $color-primario;
-            color:$color-primario;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border-radius: 0px 25px 25px 0px;
-            &:hover {
-                color: #fff;
-                background-color: $color-secundario;
+        a {
+            text-decoration: none !important;
+            border-bottom: none;
+            p {
+                margin: 0;
+                padding: 0.39em;
+                border: 1px solid $color-primario;
+                color:$color-primario;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                border-radius: 0px 25px 25px 0px;
+                &:hover {
+                    color: #fff;
+                    background-color: $color-secundario;
+                }
             }
         }
     }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ItemList from "./dummy/ItemList";
+import { useParams } from "react-router-dom";
 
 export const ItemListContainer = (props) => {
   // Array con relojes
@@ -10,6 +11,7 @@ export const ItemListContainer = (props) => {
       price: 25000,
       pictureUrl: "./img/relojes/reloj-samsung-1.png",
       alt: "Smartwatch Samsung 1",
+      brand: "samsung",
     },
     {
       id: 2,
@@ -17,6 +19,7 @@ export const ItemListContainer = (props) => {
       price: 25000,
       pictureUrl: "./img/relojes/reloj-samsung-2.png",
       alt: "Smartwatch Samsung 2",
+      brand: "samsung",
     },
     {
       id: 3,
@@ -24,6 +27,7 @@ export const ItemListContainer = (props) => {
       price: 25000,
       pictureUrl: "./img/relojes/apple-watch-1.png",
       alt: "Smartwatch Apple watch 1",
+      brand: "apple",
     },
     {
       id: 4,
@@ -31,6 +35,7 @@ export const ItemListContainer = (props) => {
       price: 25000,
       pictureUrl: "./img/relojes/apple-watch-2.png",
       alt: "Smartwatch Apple watch 2",
+      brand: "apple",
     },
     {
       id: 5,
@@ -38,6 +43,7 @@ export const ItemListContainer = (props) => {
       price: 25000,
       pictureUrl: "./img/relojes/reloj-xiaomi-1.png",
       alt: "Smartwatch Xiaomi 1",
+      brand: "xiaomi",
     },
     {
       id: 6,
@@ -45,6 +51,7 @@ export const ItemListContainer = (props) => {
       price: 25000,
       pictureUrl: "./img/relojes/reloj-xiaomi-2.png",
       alt: "Smartwatch Xiaomi 2",
+      brand: "xiaomi",
     },
     {
       id: 7,
@@ -52,6 +59,7 @@ export const ItemListContainer = (props) => {
       price: 25000,
       pictureUrl: "./img/relojes/reloj-xiaomi-3.png",
       alt: "Smartwatch Xiaomi 3",
+      brand: "xiaomi",
     },
     {
       id: 8,
@@ -59,6 +67,7 @@ export const ItemListContainer = (props) => {
       price: 25000,
       pictureUrl: "./img/relojes/reloj-xiaomi-4.png",
       alt: "Smartwatch Xiaomi 4",
+      brand: "xiaomi",
     },
   ];
 
@@ -68,19 +77,25 @@ export const ItemListContainer = (props) => {
       setTimeout(() => {
         // Si está todo ok se muestra el resolve
         resolve(smartwatches);
-      }, 2000);
+      }, 1000);
     });
   };
 
   // Hook useState
   const [watchesToShow, setWatchesToShow] = useState([]);
 
+  // useParams (parámetros que recibo por url)
+  const { categoryId } = useParams();
+
   // Hook useEffect (cada vez que se ejecuta este componente)
   useEffect(() => {
     promiseItem().then((smartwatches) => {
-      setWatchesToShow(smartwatches);
+      const brandFiltered = smartwatches.filter(
+        (smartwatch) => smartwatch.brand === categoryId
+      );
+      setWatchesToShow(brandFiltered);
     });
-  }, []);
+  }, [categoryId]);
 
   return (
     <div className="main">

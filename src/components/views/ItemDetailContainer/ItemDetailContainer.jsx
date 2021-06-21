@@ -4,7 +4,6 @@ import ItemDetail from "./dummy/ItemDetail";
 export const ItemDetailContainer = (props) => {
   // Objeto
   const smartwatch1 = {
-    id: 1,
     title: "Smartwatch Samsung 1",
     price: 25000,
     pictureUrl: "./img/relojes/reloj-samsung-1.png",
