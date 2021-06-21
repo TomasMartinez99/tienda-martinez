@@ -16,12 +16,6 @@ export const Router = () => {
           <ItemListContainer />
         </Route>
 
-        {/* Listado de productos */}
-        {/* <Route exact path="/products/">
-          <h2>Listado de productos</h2>
-          <ItemListContainer />
-        </Route> */}
-
         {/* Marcas */}
         <Route exact path="/category/:categoryId">
           <h2>Marcas disponibles</h2>
