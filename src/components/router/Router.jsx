@@ -18,7 +18,7 @@ export const Router = () => {
 
         {/* Marcas */}
         <Route exact path="/category/:categoryId">
-          <h3>Marcas disponibles</h3>
+          <h3>Relojes disponibles</h3>
           <ItemListContainer />
         </Route>
 
