@@ -1,24 +1,18 @@
 import React from "react";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 import { ItemListContainer } from "../views/ItemListContainer/ItemListContainer";
-/* import { ItemDetailContainer } from "../views/ItemDetailContainer/ItemDetailContainer"; */
-import { NavBar } from "../NavBar";
 
 export const Router = () => {
   return (
-    <BrowserRouter>
-      <NavBar />
-      <Switch>
+    <Switch>
         {/* Inicio */}
         {/* <Route exact path="/" component={ItemListContainer} /> */}
         <Route exact path="/">
-          <h3>Inicio</h3>
           <ItemListContainer />
         </Route>
 
         {/* Marcas */}
         <Route exact path="/category/:categoryId">
-          <h3>Relojes disponibles</h3>
           <ItemListContainer />
         </Route>
 
@@ -36,7 +30,6 @@ export const Router = () => {
           </Link>
         </Route>
       </Switch>
-    </BrowserRouter>
   );
 };
 
