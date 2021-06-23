@@ -3,6 +3,7 @@
         text-align: center;
         margin: 30px 0px;
     }
+
     .agregarCarrito {
         display: flex;
         flex-direction: row;
@@ -10,6 +11,7 @@
         align-items: center;
         width: auto;
         margin: 0 auto;
+
         h2 {
             text-align: center;
             width: 50px;
@@ -21,9 +23,11 @@
             font-weight: 400;
             line-height: 1.5em;
         }
+
         .btn-menos {
             border-radius: 20px 0px 0px 20px;
         }
+
         button {
             width: 40px;
             border: none;
@@ -34,22 +38,26 @@
             transition: all 0.3s ease;
             cursor: pointer;
             height: 2.1em;
+
             &:hover {
                 background-color: $color-secundario;
                 color: #fff;
             }
         }
+
         a {
             text-decoration: none !important;
             border-bottom: none;
+
             p {
                 margin: 0;
                 padding: 0.39em;
                 border: 1px solid $color-primario;
-                color:$color-primario;
+                color: $color-primario;
                 cursor: pointer;
                 transition: all 0.3s ease;
                 border-radius: 0px 25px 25px 0px;
+
                 &:hover {
                     color: #fff;
                     background-color: $color-secundario;
@@ -57,6 +65,7 @@
             }
         }
     }
+
     .smartwatches-container {
         display: flex;
         flex-direction: row;
@@ -66,6 +75,16 @@
         padding-top: 3em;
         padding-bottom: 3em;
         width: 100%;
+
+        .ver-mas {
+            background-color: $color-secundario;
+            text-decoration: none;
+            color: #fff;
+            padding: 0 0.8em 0 0.8em;
+            margin-bottom: 1em;
+            border-radius: 999px;
+        }
+
         .item {
             display: flex;
             flex-direction: column;
@@ -76,21 +95,30 @@
             margin: 20px;
             width: 16em;
             box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.16);
+            transition: all 0.3s ease;
+
+            &:hover {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.18);
+            }
+
             img {
                 width: 60%;
                 border-bottom: 1px solid $color-primario;
                 margin-bottom: 0.8em;
             }
+
             h3 {
                 font-size: 1em;
                 color: $color-secundario;
             }
+
             .btn-outline-primary {
                 margin-top: 8px;
                 margin-bottom: 18px;
                 border-radius: 50px;
                 color: $color-primario;
                 border: 1px solid $color-secundario;
+
                 &:hover {
                     color: #fff;
                     border: 1px solid $color-secundario;
@@ -98,6 +126,7 @@
                 }
             }
         }
+
         .itemDetail {
             display: flex;
             flex-direction: row;
@@ -105,15 +134,19 @@
             align-items: center;
             overflow: hidden;
             height: 400px;
+
             .img-product {
                 overflow: hidden;
+
                 img {
                     transition: all 0.3s ease;
+
                     &:hover {
                         transform: scale(1.2, 1.2);
                     }
                 }
             }
+
             .detail-product {
                 h3 {
                     font-weight: bold;

@@ -1,33 +1,36 @@
 import React, { useState, useEffect } from "react";
 import ItemDetail from "./dummy/ItemDetail";
+import { useParams } from "react-router-dom";
+import { Smartwatches } from "../../services/Smartwatches";
+
+// Promise
+const promiseItem = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      // Si está todo ok se muestra el resolve
+      resolve(Smartwatches);
+    }, 1000);
+  });
+};
 
 export const ItemDetailContainer = (props) => {
-  // Objeto
-  const smartwatch1 = {
-    title: "Smartwatch Samsung 1",
-    price: 25000,
-    pictureUrl: "./img/relojes/reloj-samsung-1.png",
-    alt: "Smartwatch Samsung 1",
-  };
+  // useParams (parámetros que recibo por url)
+  const { itemId } = useParams();
 
-  // Promise
-  const promiseItem = () => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        // Si está todo ok se muestra el resolve
-        resolve(smartwatch1);
-      }, 2000);
-    });
-  };
+  // Hook useState
+  const [itemToShow, setItemToShow] = useState([]);
 
-  // Hook useEffect (cada vez que se ejecuta este componente)
+  // Hook useEffect
   useEffect(() => {
-    promiseItem().then(smartwatch1);
-  }, []);
+    promiseItem().then(Smartwatches => {
+      const idFilter = Smartwatches.filter((smartwatch) => smartwatch.id === itemId);
+      setItemToShow(idFilter);
+    });
+  }, [itemId]);
 
   return (
     <div className="main">
-      <ItemDetail {...smartwatch1} />
+      <ItemDetail itemToShow={itemToShow} />
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Item from "./Item";
 
 // Utilizo Destructuring en la línea 5
@@ -13,7 +13,8 @@ export const ItemList = ({ watchesToShow }) => {
         <div className="row">
           <div className="smartwatches-container">
             {watchesToShow.map((smartwatch) => (
-              <Item {...smartwatch} />
+              <Item key={smartwatch.id} {...smartwatch} />
+              /* {usar Key} */
             ))}
           </div>
         </div>

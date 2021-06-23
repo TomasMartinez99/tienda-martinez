@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Item from "./Item";
 
 export const ItemDetail = (props) => {
-  // Igualo mis propiedades del objeto "smartwatch1" a "props"
   const { title, price, pictureUrl, alt } = props;
 
   return (
