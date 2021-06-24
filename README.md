@@ -1,3 +1,9 @@
+# Readme Tienda Online
+
+Tienda Online de Smartwatches
+
+El ecommerce está ambientado en "smartwatches" en dónde se puede observar en el inicio de la página todos los productos disponibles en la tienda con sus respectivos títulos, precios y botón para ver más del producto. A su vez en la barra de navegación nos encontramos con el logo de la tienda, un buscador, el carrito, botón de inicar sesíon, enlaces de inicio y de 3 marcas de relojes que actúan como link para acceder a ver que productos hay en la misma.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ItemDetail from "./dummy/ItemDetail";
+import ItemDetail from "./dummyComponents/ItemDetail";
 import { useParams } from "react-router-dom";
 import { Smartwatches } from "../../services/Smartwatches";
 

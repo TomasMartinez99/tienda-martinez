@@ -14,11 +14,15 @@ export const ItemCount = ({ stock, initial }) => {
   return (
     <>
       <div className="agregarCarrito">
-        <button className="btn-menos" onClick={(e) => decrementar()}>
-          -
-        </button>
-        <h2>{count}</h2>
-        <button onClick={(e) => onAdd()}>+</button>
+        <div>
+          <button className="btn-menos" onClick={(e) => decrementar()}>
+            -
+          </button>
+          <h2>{count}</h2>
+          <button className="btn-mas" onClick={(e) => onAdd()}>
+            +
+          </button>
+        </div>
         <p>Agregar al carrito</p>
       </div>
     </>

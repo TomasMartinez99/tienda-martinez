@@ -1,6 +1,5 @@
 import React from "react";
 import ItemCount from "../ItemCount";
-import { Link } from "react-router-dom";
 
 // Componente Render
 export const Item = (props) => {
@@ -20,9 +19,6 @@ export const Item = (props) => {
           <ItemCount stock={5} initial={1} />
         </div>
       </article>
-      <div>
-        <Link to="/">Volver al inicio</Link>
-      </div>
     </>
   );
 };
