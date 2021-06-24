@@ -22,10 +22,13 @@ export const ItemListContainer = (props) => {
 
   // Hook useEffect
   useEffect(() => {
-    promiseItem().then(Smartwatches => {
-      const brandFiltered = categoryId === undefined 
+    promiseItem().then((Smartwatches) => {
+      const brandFiltered =
+        categoryId === undefined
           ? Smartwatches
-          : Smartwatches.filter((smartwatch) => smartwatch.brand === categoryId);
+          : Smartwatches.filter(
+              (smartwatch) => smartwatch.brand === categoryId
+            );
       setWatchesToShow(brandFiltered);
     });
   }, [categoryId]);
@@ -33,7 +36,6 @@ export const ItemListContainer = (props) => {
   return (
     <div className="main">
       <ItemList watchesToShow={watchesToShow} />
-      {/* PREGUNTAR FUNCIONAMIENTO watchesToShow={watchesToShow} */}
     </div>
   );
 };

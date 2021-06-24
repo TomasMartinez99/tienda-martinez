@@ -2,13 +2,13 @@ import React from "react";
 import Item from "./Item";
 
 export const ItemDetail = (props) => {
-  const { title, price, pictureUrl, alt } = props;
+  const smartwatch = props;
 
   return (
     <>
       <div className="row">
         <div className="smartwatches-container">
-          <Item title={title} price={price} pictureUrl={pictureUrl} alt={alt} />
+          <Item {...smartwatch} />
         </div>
       </div>
     </>

@@ -14,17 +14,19 @@ const promiseItem = () => {
 };
 
 export const ItemDetailContainer = (props) => {
-  // useParams (parámetros que recibo por url)
-  const { itemId } = useParams();
-
   // Hook useState
   const [itemToShow, setItemToShow] = useState([]);
 
+  // useParams (parámetros que recibo por url)
+  const { itemId } = useParams();
+
   // Hook useEffect
   useEffect(() => {
-    promiseItem().then(Smartwatches => {
-      const idFilter = Smartwatches.filter((smartwatch) => smartwatch.id === itemId);
-      setItemToShow(idFilter);
+    promiseItem().then((Smartwatches) => {
+      const idFilter = Smartwatches.filter(
+        (smartwatch) => smartwatch.id == itemId
+      );
+      setItemToShow(idFilter[0]);
     });
   }, [itemId]);
 
@@ -34,5 +36,3 @@ export const ItemDetailContainer = (props) => {
     </div>
   );
 };
-
-export default ItemDetailContainer;

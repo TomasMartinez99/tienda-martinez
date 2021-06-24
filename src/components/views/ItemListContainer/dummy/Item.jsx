@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 
 // Componente Render
 export const Item = (props) => {
-  const itemId = "itemId";
-
   return (
     <article className="item col-3">
       <img src={props.pictureUrl} alt={props.alt} />
@@ -13,7 +11,7 @@ export const Item = (props) => {
       <a href="#" className="btn btn-outline-primary">
         Agregar al carrito
       </a>
-      <Link className="ver-mas" exact to={`/item/${itemId}`}>
+      <Link className="ver-mas" to={`/item/${props.id}`}>
         Ver más
       </Link>
     </article>

@@ -14,7 +14,6 @@ export const ItemList = ({ watchesToShow }) => {
           <div className="smartwatches-container">
             {watchesToShow.map((smartwatch) => (
               <Item key={smartwatch.id} {...smartwatch} />
-              /* {usar Key} */
             ))}
           </div>
         </div>

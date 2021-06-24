@@ -14,7 +14,7 @@ export const NavBar = () => {
           <nav className="menu">
             {/* Logo tienda */}
             <div className="logo">
-              <Link exact to="/">
+              <Link to="/">
                 <p>SmartWatches</p>
               </Link>
             </div>
@@ -28,7 +28,7 @@ export const NavBar = () => {
             {/* Enlaces */}
             <ul className="enlaces">
               <li>
-                <NavLink exact to="/" activeClassName="active">
+                <NavLink to="/" activeClassName="active">
                   Inicio
                 </NavLink>
               </li>
