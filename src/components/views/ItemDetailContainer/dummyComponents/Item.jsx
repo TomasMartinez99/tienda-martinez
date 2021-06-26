@@ -1,9 +1,10 @@
 import React from "react";
-import ItemCount from "../ItemCount";
+import { useState } from "react";
 
 // Componente Render
 export const Item = (props) => {
   const itemRender = props.itemToShow;
+  const [visible, setVisible] = useState(true);
 
   return (
     <>
@@ -13,10 +14,9 @@ export const Item = (props) => {
           <img src={itemRender.pictureUrl} alt={itemRender.alt} />
         </div>
         {/* Detalle del producto */}
-        <div className="detail-product col-7">
+        <div className="col-7">
           <h3>{itemRender.title}</h3>
           <h4>${itemRender.price}</h4>
-          <ItemCount stock={5} initial={1} />
         </div>
       </article>
     </>
