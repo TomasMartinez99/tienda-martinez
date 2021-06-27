@@ -68,6 +68,8 @@
 
         /* Contador-AgregarCarrito del Producto */
         .addCart {
+            margin-top: -125px;
+            margin-right: 76px;
             .count {
                 display: flex;
                 flex-direction: column;
@@ -138,13 +140,16 @@
                     color: #fff;
                 }
             }
-            .btn-confirmar {
-                margin-left: 1em;
-                background: $color-primario;
-                color: #fff;
-                transition: all 0.3s ease;
-                &:hover {
-                    transform: scale(1.1, 1.1);
+            .cancelar-confirmar-container {
+                margin-left: 44px;
+                .btn-confirmar {
+                    margin-left: 1em;
+                    background: $color-primario;
+                    color: #fff;
+                    transition: all 0.3s ease;
+                    &:hover {
+                        transform: scale(1.1, 1.1);
+                    }
                 }
             }
         }
