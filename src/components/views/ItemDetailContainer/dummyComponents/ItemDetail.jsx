@@ -1,17 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Item from "./Item";
 import ItemCount from "../ItemCount";
-import { Link } from "react-router-dom";
-import { useState } from "react";
 
 export const ItemDetail = (props) => {
-  const smartwatches = props;
+  const smartwatch = props;
   const [visible, setVisible] = useState(true);
 
   return (
     <div className="row">
       <div className="smartwatches-container">
-        <Item {...smartwatches} />
+        <Item {...smartwatch} />
 
         {/* Condición Agregar carrito */}
         <div className="addCart">
@@ -20,7 +19,7 @@ export const ItemDetail = (props) => {
               <button className="btn" onClick={() => setVisible(false)}>
                 Agregar al carrito
               </button>
-              <ItemCount stock={5} initial={1} />
+              <ItemCount stock={5} />
             </>
           ) : (
             <div className="cancelar-confirmar-container">

@@ -1,10 +1,8 @@
 import React from "react";
-import { useState } from "react";
 
 // Componente Render
 export const Item = (props) => {
   const itemRender = props.itemToShow;
-  const [visible, setVisible] = useState(true);
 
   return (
     <article className="itemDetail col-12">
