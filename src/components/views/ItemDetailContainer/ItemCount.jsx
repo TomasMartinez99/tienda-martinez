@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 
 export const ItemCount = ({ stock }) => {
-  const [count, setCount] = useContext(CartContext);
+  const { count, setCount } = useContext(CartContext);
 
   const incrementar = () => {
     count < stock && setCount(count + 1);

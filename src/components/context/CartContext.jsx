@@ -3,13 +3,21 @@ import React, { useState } from "react";
 // Array para almacenar los productos agregados
 export const CartContext = React.createContext([]);
 
-// cartProvider es el proveedor de nuestro cartContext
+// CartComponentProvider es el proveedor de nuestro CartContext
 export const CartComponentProvider = ({ children }) => {
-  const [aggregate, setAggregate] = useState([]);
-  const [count, setCount] = useState([1]);
+  const [count, setCount] = useState(1);
+  const [aggregateItem, setAggregateItem] = useState([]);
 
   return (
-    <CartContext.Provider value={[aggregate, setAggregate, count, setCount]}>
+    <CartContext.Provider
+      value={{
+        count,
+        setCount,
+        aggregateItem,
+        setAggregateItem,
+      }}
+    >
+      {/* Componentes que van a tener acceso */}
       {children}
     </CartContext.Provider>
   );
