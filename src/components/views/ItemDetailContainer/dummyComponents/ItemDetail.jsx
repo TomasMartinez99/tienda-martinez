@@ -8,13 +8,7 @@ import Smartwatches from "../../../services/Smartwatches";
 export const ItemDetail = (props) => {
   const smartwatch = props;
   const [visible, setVisible] = useState(true);
-  const { count, setCount } = useContext(CartContext);
-  const { aggregateItem, setAggregateItem } = useContext(CartContext);
-
-  const addItem = (smartwatch, count) => {
-    setAggregateItem([smartwatch, count]);
-    console.log(aggregateItem);
-  };
+  const { addItem } = useContext(CartContext);
 
   return (
     <div className="row">
@@ -36,7 +30,7 @@ export const ItemDetail = (props) => {
               </button>
               <Link
                 className="btn btn-confirmar"
-                onClick={() => addItem(smartwatch, count)}
+                onClick={() => addItem(smartwatch)}
                 to="/cart"
               >
                 Confirmar

@@ -8,6 +8,13 @@ export const CartComponentProvider = ({ children }) => {
   const [count, setCount] = useState(1);
   const [aggregateItem, setAggregateItem] = useState([]);
 
+  const addItem = (smartwatch) => {
+    setAggregateItem([...aggregateItem, smartwatch]);
+    setCount(count + 1);
+
+    console.log("Carrito actualizado", { aggregateItem });
+  };
+
   return (
     <CartContext.Provider
       value={{
@@ -15,6 +22,7 @@ export const CartComponentProvider = ({ children }) => {
         setCount,
         aggregateItem,
         setAggregateItem,
+        addItem,
       }}
     >
       {/* Componentes que van a tener acceso */}
