@@ -5,8 +5,7 @@ import ItemCount from "../ItemCount";
 import { CartContext } from "../../../context/CartContext";
 import Smartwatches from "../../../services/Smartwatches";
 
-export const ItemDetail = (props) => {
-  const smartwatch = props;
+export const ItemDetail = (smartwatch) => {
   const [visible, setVisible] = useState(true);
   const { addItem } = useContext(CartContext);
 

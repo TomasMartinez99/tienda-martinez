@@ -9,12 +9,10 @@ export const CartComponentProvider = ({ children }) => {
   const [quantity, setQuantity] = useState(0);
   const [aggregateItems, setAggregateItems] = useState([]);
 
-  const addItem = ({ smartwatch }) => {
+  const addItem = (smartwatch) => {
     // Usamos el spread operator y le sumamos lo que recibe por parámetro (smartwatch)
     setAggregateItems([...aggregateItems, smartwatch]);
     setCount(count + 1);
-
-    return console.log("Carrito actualizado", (aggregateItems, count));
   };
 
   return (
