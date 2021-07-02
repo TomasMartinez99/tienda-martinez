@@ -5,8 +5,10 @@ import ItemCount from "../ItemCount";
 import { CartContext } from "../../../context/CartContext";
 import Smartwatches from "../../../services/Smartwatches";
 
-export const ItemDetail = (smartwatch) => {
+export const ItemDetail = (props) => {
+  const smartwatch = props;
   const [visible, setVisible] = useState(true);
+  const [itemCount, setItemCount] = useState(0);
   const { addItem } = useContext(CartContext);
 
   return (
@@ -20,7 +22,11 @@ export const ItemDetail = (smartwatch) => {
               <button className="btn" onClick={() => setVisible(false)}>
                 Agregar al carrito
               </button>
-              <ItemCount stock={5} />
+              <ItemCount
+                stock={5}
+                itemCount={itemCount}
+                setItemCount={setItemCount}
+              />
             </>
           ) : (
             <div className="cancelar-confirmar-container">
@@ -29,7 +35,7 @@ export const ItemDetail = (smartwatch) => {
               </button>
               <Link
                 className="btn btn-confirmar"
-                onClick={() => addItem(smartwatch)}
+                onClick={() => addItem(smartwatch, itemCount)}
                 to="/cart"
               >
                 Confirmar

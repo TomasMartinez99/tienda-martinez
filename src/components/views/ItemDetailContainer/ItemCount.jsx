@@ -1,15 +1,13 @@
 import React, { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 
-export const ItemCount = ({ stock }) => {
-  const { count, setCount } = useContext(CartContext);
-
+export const ItemCount = ({ stock, itemCount, setItemCount }) => {
   const incrementar = () => {
-    count < stock && setCount(count + 1);
+    itemCount < stock && setItemCount(itemCount + 1);
   };
 
   const decrementar = () => {
-    count > 1 && setCount(count - 1);
+    itemCount > 1 && setItemCount(itemCount - 1);
   };
 
   return (
@@ -18,7 +16,7 @@ export const ItemCount = ({ stock }) => {
         <button className="btn-menos" onClick={(e) => decrementar()}>
           -
         </button>
-        <h2> {count} </h2>
+        <h2> {itemCount} </h2>
         <button className="btn-mas" onClick={(e) => incrementar()}>
           +
         </button>
