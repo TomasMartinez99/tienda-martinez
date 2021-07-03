@@ -2,6 +2,7 @@ import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
 import { ItemListContainer } from "../views/ItemListContainer/ItemListContainer";
 import { ItemDetailContainer } from "../views/ItemDetailContainer/ItemDetailContainer";
+import { CartItems } from "../views/cart/CartItems";
 
 export const Router = () => {
   return (
@@ -14,6 +15,9 @@ export const Router = () => {
 
       {/* Detalle producto */}
       <Route exact path="/item/:itemId" component={ItemDetailContainer} />
+
+      {/* Carrito con items */}
+      <Route exact path="/cart" component={CartItems} />
 
       {/* Página no encontrada */}
       <Route path="/">

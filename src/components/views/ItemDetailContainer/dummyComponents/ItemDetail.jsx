@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Item from "./Item";
 import ItemCount from "../ItemCount";
 import { CartContext } from "../../../context/CartContext";
-import Smartwatches from "../../../services/Smartwatches";
 
 export const ItemDetail = (props) => {
   const smartwatch = props;
@@ -38,7 +37,7 @@ export const ItemDetail = (props) => {
                 onClick={() => addItem(smartwatch, itemCount)}
                 to="/cart"
               >
-                Confirmar
+                Confirmar compra
               </Link>
             </div>
           )}

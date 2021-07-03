@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../../context/CartContext";
 
 // Componente Render
 export const Item = (props) => {
+  const smartwatch = props;
+  const [itemCount, setItemCount] = useState(1);
+  const { addItem } = useContext(CartContext);
+
   return (
     <article className="item col-3">
-      <img src={props.pictureUrl} alt={props.alt} />
-      <h3>{props.title}</h3>
-      <h4>${props.price}</h4>
-      <a href="#" className="btn btn-outline-primary">
+      <img src={smartwatch.pictureUrl} alt={smartwatch.alt} />
+      <h3>{smartwatch.title}</h3>
+      <h4>${smartwatch.price}</h4>
+      <Link
+        className="btn btn-outline-primary"
+        onClick={() => addItem(smartwatch, itemCount)}
+      >
         Agregar al carrito
-      </a>
-      <Link className="ver-mas" to={`/item/${props.id}`}>
+      </Link>
+      <Link className="ver-mas" to={`/item/${smartwatch.id}`}>
         Ver más
       </Link>
     </article>
