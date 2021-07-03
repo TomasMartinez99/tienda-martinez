@@ -16,6 +16,7 @@ export const Item = (props) => {
       <Link
         className="btn btn-outline-primary"
         onClick={() => addItem(smartwatch, itemCount)}
+        to="/cart"
       >
         Agregar al carrito
       </Link>
