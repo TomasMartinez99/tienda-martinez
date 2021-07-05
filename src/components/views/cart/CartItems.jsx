@@ -15,11 +15,8 @@ export const CartItems = (props) => {
         // Recorrer y mostrar array con relojes
         <div className="row">
           <div className="smartwatches-container">
-            {aggregateItems.map((smartwatchAndQuantity) => (
-              <CartDetail
-                key={smartwatchAndQuantity.id}
-                {...smartwatchAndQuantity}
-              />
+            {aggregateItems.map((smartwatchAndCount) => (
+              <CartDetail key={smartwatchAndCount.id} {...smartwatchAndCount} />
             ))}
           </div>
         </div>
