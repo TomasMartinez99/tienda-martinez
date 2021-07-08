@@ -1,26 +1,28 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
+/* import { CartContext } from "../../context/CartContext"; */
 
 export const CartDetail = (props) => {
-  const smartwatchAndCount = props;
-  const title = smartwatchAndCount.smartwatch.title;
-  const price = smartwatchAndCount.smartwatch.price;
-  const quantity = smartwatchAndCount.itemCount;
-  const [sum, setSum] = useState(0);
-
-  console.log(sum);
-  useEffect(() => {
-    setSum(sum + price);
-  }, []);
+  /* const { aggregateItems, setAggregateItems } = useContext(CartContext); */
+  const title = props.smartwatch.itemToShow.title;
+  const price = props.smartwatch.itemToShow.price;
+  const pictureUrl = props.smartwatch.itemToShow.pictureUrl;
+  const alt = props.smartwatch.itemToShow.alt;
+  const quantity = props.itemCount;
 
   return (
     <>
-      <article className="item col-3">
-        <h3>{title}</h3>
-        <h3>{price}</h3>
-        <h4>{`Cantidad ${quantity}`}</h4>
-        <hr />
-      </article>
-      <h4>{`Total $ ${sum}`}</h4>
+      <div>
+        <img src={pictureUrl} alt={alt} />
+        <div className="detail">
+          <h3>{title}</h3>
+          <h4 className="price">{`$${price}`}</h4>
+          <h4>{`Cantidad ${quantity}`}</h4>
+          {/*           <div onClick={() => removeProducto(id)}>
+            <button>Borrar</button>
+          </div> */}
+        </div>
+      </div>
+      <hr />
     </>
   );
 };

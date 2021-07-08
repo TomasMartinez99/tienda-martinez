@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import { CartContext } from "../../context/CartContext";
+import React from "react";
 
 export const ItemCount = ({ stock, itemCount, setItemCount }) => {
   const incrementar = () => {
