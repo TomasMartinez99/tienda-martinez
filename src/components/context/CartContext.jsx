@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 // Array para almacenar los productos agregados
 export const CartContext = React.createContext([]);
@@ -10,11 +10,11 @@ export const CartComponentProvider = ({ children }) => {
 
   const addItem = (smartwatch, itemCount) => {
     const smartwatchId = smartwatch.itemToShow.id;
-    const arr = aggregateItems.smartwatch;
+    const arr = smartwatch.itemToShow;
 
-    const found = arr.find(({ element }) => element === smartwatchId);
+    const found = arr.find((element) => element === smartwatchId);
+    console.log(arr);
 
-    console.log(found);
     setAggregateItems([...aggregateItems, { smartwatch, itemCount }]);
     setQuantity(quantity + itemCount);
   };
