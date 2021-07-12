@@ -5,6 +5,7 @@ export const CartContext = React.createContext([]);
 
 // CartComponentProvider es el proveedor de nuestro CartContext
 export const CartComponentProvider = ({ children }) => {
+  // Cantidad de los productos agregados
   const [quantity, setQuantity] = useState(0);
   const [aggregateItems, setAggregateItems] = useState([]);
 
@@ -32,6 +33,7 @@ export const CartComponentProvider = ({ children }) => {
         setAggregateItems,
         addItem,
         quantity,
+        setQuantity,
       }}
     >
       {/* Componentes que van a tener acceso */}

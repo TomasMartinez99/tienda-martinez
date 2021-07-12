@@ -4,6 +4,7 @@ import CartDetail from "./CartDetail";
 
 export const CartItems = () => {
   const { aggregateItems, setAggregateItems } = useContext(CartContext);
+  const { quantity, setQuantity } = useContext(CartContext);
   const [total, setTotal] = useState(0);
 
   // Hook para calcular el total de los items
@@ -15,11 +16,17 @@ export const CartItems = () => {
     setTotal(res);
   }, [aggregateItems]);
 
+  // Función para vaciar carrito
+  const clear = () => {
+    setAggregateItems([]);
+    setQuantity(0);
+  };
+
   return (
     <>
       <div className="cart">
         <h2>Su carrito</h2>
-
+        {console.log(aggregateItems)}
         {aggregateItems.length === 0 ? (
           <h3>No hay artículos agregados al carrito</h3>
         ) : (
@@ -33,10 +40,14 @@ export const CartItems = () => {
                   {...smartwatchAndCount}
                 />
               ))}
+              <div className="clearItems">
+                <button className="btn btn-danger" onClick={() => clear()}>
+                  Vaciar carrito
+                </button>
+              </div>
             </div>
           </div>
         )}
-
         <h3>Total: ${total}</h3>
       </div>
     </>

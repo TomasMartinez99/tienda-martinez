@@ -21,6 +21,21 @@
             .detail {
                 display: flex;
                 flex-direction: column;
+                .btn-danger{
+                    border-radius: 999px;
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .clearItems {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0px;
+            .btn-danger {
+                width: 120px;
+                border-radius: 999px;
             }
         }
     }
