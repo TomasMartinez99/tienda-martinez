@@ -19,7 +19,9 @@ export const CartComponentProvider = ({ children }) => {
 
     // Condición para saber si el item está agregado
     if (found) {
-      alert("item duplicado");
+      alert("Item duplicado");
+      itemCount = itemCount + found.itemCount;
+      setAggregateItems([{ smartwatch, itemCount }]);
     } else {
       setAggregateItems([...aggregateItems, { smartwatch, itemCount }]);
       setQuantity(quantity + itemCount);

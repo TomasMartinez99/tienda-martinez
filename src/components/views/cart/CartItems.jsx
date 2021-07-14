@@ -26,7 +26,6 @@ export const CartItems = () => {
     <>
       <div className="cart">
         <h2>Su carrito</h2>
-        {console.log(aggregateItems)}
         {aggregateItems.length === 0 ? (
           <h3>No hay artículos agregados al carrito</h3>
         ) : (

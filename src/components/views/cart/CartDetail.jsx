@@ -5,12 +5,12 @@ export const CartDetail = (props) => {
   const { aggregateItems, setAggregateItems } = useContext(CartContext);
   const { quantity, setQuantity } = useContext(CartContext);
   /* const [subTotal, setSubTotal] = useState(); */
+  const itemCount = props.itemCount;
   const title = props.smartwatch.itemToShow.title;
   const price = props.smartwatch.itemToShow.price;
   const pictureUrl = props.smartwatch.itemToShow.pictureUrl;
   const itemId = props.smartwatch.itemToShow.id;
   const alt = props.smartwatch.itemToShow.alt;
-  const itemCount = props.itemCount;
 
   // Función para eliminar item
   const removeItem = (itemId) => {
