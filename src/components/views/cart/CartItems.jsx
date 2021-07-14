@@ -41,15 +41,15 @@ export const CartItems = () => {
                   {...smartwatchAndCount}
                 />
               ))}
-              <div className="clearItems">
+              <div className="clearAndTotal">
                 <button className="btn btn-danger" onClick={() => clear()}>
                   Vaciar carrito
                 </button>
+                <h3 className="total">Total: ${total}</h3>
               </div>
             </div>
           </div>
         )}
-        <h3>Total: ${total}</h3>
       </div>
     </>
   );
