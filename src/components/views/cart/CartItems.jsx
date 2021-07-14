@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import CartDetail from "./CartDetail";
 
@@ -29,6 +30,7 @@ export const CartItems = () => {
         {aggregateItems.length === 0 ? (
           <h3>No hay artículos agregados al carrito</h3>
         ) : (
+          /* <Link to="/">Volver al inicio</Link> */
           // Recorrer y mostrar array con relojes
           <div className="row">
             <div className="cart-detail">
