@@ -22,6 +22,7 @@ export const CartComponentProvider = ({ children }) => {
       alert("Item duplicado");
       itemCount = itemCount + found.itemCount;
       setAggregateItems([{ smartwatch, itemCount }]);
+      setQuantity(itemCount);
     } else {
       setAggregateItems([...aggregateItems, { smartwatch, itemCount }]);
       setQuantity(quantity + itemCount);
