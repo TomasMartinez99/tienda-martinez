@@ -1,11 +1,10 @@
 import React, { useContext, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import CartDetail from "./CartDetail";
 
 export const CartItems = () => {
   const { aggregateItems, setAggregateItems } = useContext(CartContext);
-  const { quantity, setQuantity } = useContext(CartContext);
+  const { setQuantity } = useContext(CartContext);
   const [total, setTotal] = useState(0);
 
   // Hook para calcular el total de los items

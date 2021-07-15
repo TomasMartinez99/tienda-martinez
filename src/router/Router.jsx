@@ -2,7 +2,7 @@ import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
 import { ItemListContainer } from "../views/ItemListContainer/ItemListContainer";
 import { ItemDetailContainer } from "../views/ItemDetailContainer/ItemDetailContainer";
-import { CartItems } from "../views/cart/CartItems";
+import { CartItems } from "../components/cart/CartItems";
 
 export const Router = () => {
   return (

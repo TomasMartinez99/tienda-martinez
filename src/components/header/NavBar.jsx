@@ -52,7 +52,7 @@ export const NavBar = () => {
           <CartWidget />
 
           {/* Btn iniciar sesion */}
-          <a href="#" className="btn btn-outline-light">
+          <a href="" className="btn btn-outline-light">
             Iniciar sesión
           </a>
         </nav>

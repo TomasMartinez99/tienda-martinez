@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ItemList from "./dummyComponents/ItemList";
 import { useParams } from "react-router-dom";
 import { Smartwatches } from "../../services/Smartwatches";
-import { database } from "../../../firebase/firebase";
+/* import { database } from "../../../firebase/firebase"; */
 
 /* useEffect(() => {
   setLoading(true);
