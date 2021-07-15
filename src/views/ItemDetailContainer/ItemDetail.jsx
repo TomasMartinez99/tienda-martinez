@@ -1,8 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-/* import Item from "./Item"; */
-import ItemCount from "../../../components/ItemCount";
-import { CartContext } from "../../../context/CartContext";
+import ItemCount from "../../components/ItemCount";
+import { CartContext } from "../../context/CartContext";
 
 // Render del reloj
 export const Item = (props) => {
