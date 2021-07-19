@@ -20,9 +20,20 @@ export const CartComponentProvider = ({ children }) => {
     // Condición para saber si el item está agregado
     if (found) {
       alert("Item duplicado");
+
       itemCount = itemCount + found.itemCount;
-      setAggregateItems([{ smartwatch, itemCount }]);
-      setQuantity(itemCount);
+      const DupAggregateItems = aggregateItems.slice();
+      const newCarts = DupAggregateItems.map((newCart) => {
+        console.log(newCart.smartwatch.itemToShow.id);
+        return {
+          ...newCart,
+          itemCount,
+        };
+      });
+      setAggregateItems(newCarts);
+
+      /* setAggregateItems([...aggregateItems, { smartwatch, itemCount }]); */
+      setQuantity(quantity + itemCount);
     } else {
       setAggregateItems([...aggregateItems, { smartwatch, itemCount }]);
       setQuantity(quantity + itemCount);
