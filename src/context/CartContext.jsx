@@ -11,9 +11,10 @@ export const CartComponentProvider = ({ children }) => {
 
   const addItem = (smartwatch, itemCount) => {
     const smartwatchId = smartwatch.itemToShow.id;
+    const dupAggregateItems = [...aggregateItems];
 
     // Buscamos si coincide el id del item a agregar con los que tenemos agregados
-    const found = aggregateItems.find((element) => {
+    const found = dupAggregateItems.find((element) => {
       return element.smartwatch.itemToShow.id === smartwatchId;
     });
 
@@ -21,18 +22,10 @@ export const CartComponentProvider = ({ children }) => {
     if (found) {
       alert("Item duplicado");
 
-      itemCount = itemCount + found.itemCount;
-      const DupAggregateItems = aggregateItems.slice();
-      const newCarts = DupAggregateItems.map((newCart) => {
-        console.log(newCart.smartwatch.itemToShow.id);
-        return {
-          ...newCart,
-          itemCount,
-        };
-      });
-      setAggregateItems(newCarts);
+      const sum = found.itemCount;
+      found.itemCount = sum + itemCount;
 
-      /* setAggregateItems([...aggregateItems, { smartwatch, itemCount }]); */
+      setAggregateItems(dupAggregateItems);
       setQuantity(quantity + itemCount);
     } else {
       setAggregateItems([...aggregateItems, { smartwatch, itemCount }]);
