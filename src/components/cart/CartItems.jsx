@@ -36,7 +36,7 @@ export const CartItems = () => {
               {/* Recorrer el array con los items agregados al carrito */}
               {aggregateItems.map((smartwatchAndCount) => (
                 <CartDetail
-                  key={smartwatchAndCount.id}
+                  key={smartwatchAndCount.smartwatch.itemToShow.id}
                   {...smartwatchAndCount}
                 />
               ))}
