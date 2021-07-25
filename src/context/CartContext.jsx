@@ -36,7 +36,6 @@ export const CartComponentProvider = ({ children }) => {
   const clear = () => {
     setAggregateItems([]);
     setQuantity(0);
-    console.log(aggregateItems);
   };
 
   return (
