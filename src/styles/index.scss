@@ -8,6 +8,10 @@ $gris: #343434;
     padding: 0px;
 }
 
+.row {
+    --bs-gutter-x: 0px !important;
+}
+
 body {
     font-size: 16px;
 
@@ -15,4 +19,6 @@ body {
     @import 'main';
     @import 'mediaqueries';
     @import 'cart';
+    @import 'form';
+    @import 'footer';
 }

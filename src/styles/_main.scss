@@ -4,14 +4,20 @@
         margin: 30px 0px;
     }
 
-    .smartwatches-container {
+    .tituloInicio {
+        color: $color-secundario;
+        margin-top: 50px;
+        margin-bottom: -80px;
+    }
+
+    .smartwatchesContainer {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
         flex-wrap: wrap;
-        padding-top: 3em;
-        padding-bottom: 3em;
+        padding-top: 7em;
+        padding-bottom: 7em;
         width: 100%;
 
         .ver-mas {
@@ -33,9 +39,9 @@
             border-radius: 20px;
             margin: 20px;
             width: 16em;
+            height: 18.4em;
             box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.16);
             transition: all 0.3s ease;
-
             &:hover {
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.18);
             }
@@ -161,7 +167,7 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            height: 400px;
+            height: 23em;
 
             .img-product {
                 overflow: hidden;

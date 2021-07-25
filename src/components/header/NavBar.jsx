@@ -14,7 +14,7 @@ export const NavBar = () => {
           {/* Logo tienda */}
           <div className="logo">
             <Link to="/">
-              <p>SmartWatches</p>
+              <p>Timeshop</p>
             </Link>
           </div>
 

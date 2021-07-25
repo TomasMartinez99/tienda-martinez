@@ -30,7 +30,7 @@ export const ItemDetail = (props) => {
 
   return (
     <div className="row">
-      <div className="smartwatches-container">
+      <div className="smartwatchesContainer">
         <Item {...smartwatch} />
         {/* Condición Agregar carrito */}
         <div className="addCart">

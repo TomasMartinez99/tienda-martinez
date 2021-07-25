@@ -11,7 +11,9 @@ export const ItemList = ({ watchesToShow }) => {
       ) : (
         // Recorrer y mostrar array con relojes
         <div className="row">
-          <div className="smartwatches-container">
+          <h2 className="tituloInicio">Elegí tu próximo reloj inteligente</h2>
+
+          <div className="smartwatchesContainer">
             {watchesToShow.map((smartwatch, i) => (
               <Item key={i} {...smartwatch} />
             ))}

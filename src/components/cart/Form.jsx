@@ -30,9 +30,9 @@ export const Form = ({ aggregateItems, itemsPrice, clear }) => {
       const outOfStock = [];
 
       querySnapshot.docs.forEach((docSnapshot, id) => {
-        if (docSnapshot.data().stock >= aggregateItems[id].quantity) {
+        if (docSnapshot.data().stock >= aggregateItems[id].itemCount) {
           batch.update(docSnapshot.ref, {
-            stock: docSnapshot.data().stock - aggregateItems[id].quantity,
+            stock: docSnapshot.data().stock - aggregateItems[id].itemCount,
           });
         } else {
           outOfStock.push({ ...docSnapshot.data(), id: docSnapshot.id });
@@ -44,10 +44,10 @@ export const Form = ({ aggregateItems, itemsPrice, clear }) => {
 
         const orderItems = aggregateItems.map((item) => {
           return {
-            id: item.item.id,
-            title: item.item.name,
-            price: item.item.price,
-            qty: item.quantity,
+            id: item.smartwatch.itemToShow.id,
+            title: item.smartwatch.itemToShow.name,
+            price: item.smartwatch.itemToShow.price,
+            itemCount: item.smartwatch.itemToShow.itemCount,
           };
         });
 
@@ -121,7 +121,7 @@ export const Form = ({ aggregateItems, itemsPrice, clear }) => {
             />
           </p>
           <button
-            className="formButton"
+            className="btn btn-outline-success"
             type="submit"
             disabled={name === "" || phone === "" || mail === ""}
           >
