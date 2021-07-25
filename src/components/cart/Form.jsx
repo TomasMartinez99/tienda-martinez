@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Redirect } from "react-router-dom";
 import { database } from "../../firebase/firebase";
 import firebase from "firebase/app";
 import "firebase/firestore";
@@ -8,7 +7,6 @@ export const Form = ({ aggregateItems, itemsPrice, clear }) => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [mail, setMail] = useState("");
-  const [mailConfirmation, setMailConfirmation] = useState("");
   const [redirect, setRedirect] = useState(false);
   const [orderNumber, setOrderNumber] = useState("");
 
@@ -21,10 +19,10 @@ export const Form = ({ aggregateItems, itemsPrice, clear }) => {
       mail: mail,
     };
 
-    const itemsToUpdate = database.collection("items").where(
+    const itemsToUpdate = database.collection("products").where(
       firebase.firestore.FieldPath.documentId(),
       "in",
-      aggregateItems.map((i) => i.item.id)
+      aggregateItems.map((i) => i.smartwatch.itemToShow.id)
     );
 
     itemsToUpdate.get().then((querySnapshot) => {
@@ -78,7 +76,7 @@ export const Form = ({ aggregateItems, itemsPrice, clear }) => {
   return (
     <>
       {redirect ? (
-        <Redirect to={`/thankyou/${orderNumber}`} />
+        alert("Orden realizada con éxito")
       ) : (
         <form onSubmit={createOrder}>
           <p>

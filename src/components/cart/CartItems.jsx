@@ -54,7 +54,7 @@ export const CartItems = () => {
                 <h2>Mis Datos</h2>
                 <Form
                   aggregateItems={aggregateItems}
-                  /* itemsPrice={itemsPrice} */
+                  itemsPrice={total}
                   clear={clear}
                 />
               </div>
