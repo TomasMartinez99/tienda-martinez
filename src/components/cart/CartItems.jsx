@@ -1,10 +1,12 @@
 import React, { useContext, useState, useEffect } from "react";
 import { CartContext } from "../../context/CartContext";
 import CartDetail from "./CartDetail";
+import { Form } from "./Form";
 
 export const CartItems = () => {
   const { aggregateItems, setAggregateItems } = useContext(CartContext);
   const { setQuantity } = useContext(CartContext);
+  const { clear } = useContext(CartContext);
   const [total, setTotal] = useState(0);
 
   // Hook para calcular el total de los items
@@ -16,12 +18,6 @@ export const CartItems = () => {
     setTotal(res);
   }, [aggregateItems]);
 
-  // Función para vaciar carrito
-  const clear = () => {
-    setAggregateItems([]);
-    setQuantity(0);
-  };
-
   return (
     <>
       <div className="cart">
@@ -29,10 +25,10 @@ export const CartItems = () => {
         {aggregateItems.length === 0 ? (
           <h3>No hay artículos agregados al carrito</h3>
         ) : (
-          /* <Link to="/">Volver al inicio</Link> */
           // Recorrer y mostrar array con relojes
           <div className="row">
             <div className="cart-detail">
+              {console.log(aggregateItems)}
               {/* Recorrer el array con los items agregados al carrito */}
               {aggregateItems.map((smartwatchAndCount) => (
                 <CartDetail
@@ -41,12 +37,25 @@ export const CartItems = () => {
                 />
               ))}
               <div className="clearAndTotal">
-                <button className="btn btn-danger" onClick={() => clear()}>
+                <button
+                  className="btn btn-outline-danger"
+                  onClick={() => clear()}
+                >
                   Vaciar carrito
                 </button>
                 <h3 className="total">Total: ${total}</h3>
               </div>
             </div>
+            <section className="form">
+              <div className="userInfo">
+                <h2>Mis Datos</h2>
+                <Form
+                  aggregateItems={aggregateItems}
+                  /* itemsPrice={itemsPrice} */
+                  clear={clear}
+                />
+              </div>
+            </section>
           </div>
         )}
       </div>

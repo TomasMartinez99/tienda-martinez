@@ -1,5 +1,5 @@
-import firebase from "firebase";
-import 'firebase/firebase';
+import firebase from "firebase/app";
+import 'firebase/firestore';
 
 // La configuración de Firebase de su aplicación web
 var firebaseConfig = {
@@ -14,5 +14,5 @@ var firebaseConfig = {
 // Inicializando Firebase
 const fb = firebase.initializeApp(firebaseConfig);
 
-// Disponible para todos
-export const database = fb.firestore();
+// Disponible para todos los archivos
+export const database = fb.firestore(); 

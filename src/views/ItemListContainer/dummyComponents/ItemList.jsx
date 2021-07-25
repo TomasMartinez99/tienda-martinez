@@ -12,8 +12,8 @@ export const ItemList = ({ watchesToShow }) => {
         // Recorrer y mostrar array con relojes
         <div className="row">
           <div className="smartwatches-container">
-            {watchesToShow.map((smartwatch) => (
-              <Item key={smartwatch.id} {...smartwatch} />
+            {watchesToShow.map((smartwatch, i) => (
+              <Item key={i} {...smartwatch} />
             ))}
           </div>
         </div>

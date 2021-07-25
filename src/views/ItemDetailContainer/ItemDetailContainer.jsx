@@ -1,35 +1,33 @@
 import React, { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
-import { Smartwatches } from "../../services/Smartwatches";
-/* import { database } from "../../../firebase/firebase"; */
+import { database } from "../../firebase/firebase";
 
-// Promise
-const promiseItem = () => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      // Si está todo ok se muestra el resolve
-      resolve(Smartwatches);
-    }, 1000);
-  });
-};
-
-export const ItemDetailContainer = (props) => {
+export const ItemDetailContainer = () => {
   // Hook useState
   const [itemToShow, setItemToShow] = useState([]);
 
   // useParams (parámetros que recibo por url)
   const { itemId } = useParams();
 
-  // Hook useEffect
+  // useEffect de Firebase
   useEffect(() => {
-    promiseItem().then((Smartwatches) => {
-      const idFilter = Smartwatches.filter(
-        (smartwatch) => smartwatch.id == itemId
-      );
-      setItemToShow(idFilter[0]);
-    });
-  }, [itemId]);
+    const itemCollection = database.collection("products");
+    const item = itemCollection.doc(itemId);
+
+    item
+      .get()
+      .then((doc) => {
+        if (!doc.exists) {
+          alert("No hay resultados");
+          return;
+        }
+        setItemToShow({ id: doc.id, ...doc.data() });
+      })
+      .catch((error) => {
+        console.log("Error buscando items", error);
+      });
+  }, []);
 
   return (
     <div className="main">

@@ -1,47 +1,50 @@
 import React, { useState, useEffect } from "react";
 import ItemList from "./dummyComponents/ItemList";
 import { useParams } from "react-router-dom";
-import { Smartwatches } from "../../services/Smartwatches";
-/* import { database } from "../../../firebase/firebase"; */
+import { database } from "../../firebase/firebase";
 
-/* useEffect(() => {
-  setLoading(true);
-  const itemCollection = database.collection("products");
-  itemCollection.get().then((querySnapshot) => {
-    if (querySnapshot.size === 0) {
-      console.log("No hay resultados");
-    }
-  });
-}); */
-
-// Promise
-const promiseItem = () => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      // Si está todo ok se muestra el resolve
-      resolve(Smartwatches);
-    }, 1000);
-  });
-};
-
-export const ItemListContainer = (props) => {
+export const ItemListContainer = () => {
   // Hook useState
   const [watchesToShow, setWatchesToShow] = useState([]);
 
-  // useParams (parámetros que recibo por url)
+  // Parámetros que recibo por url
   const { categoryId } = useParams();
 
-  // Hook useEffect
+  // useEffect de Firebase
   useEffect(() => {
-    promiseItem().then((Smartwatches) => {
-      const brandFiltered =
-        categoryId === undefined
-          ? Smartwatches
-          : Smartwatches.filter(
-              (smartwatch) => smartwatch.brand === categoryId
-            );
-      setWatchesToShow(brandFiltered);
-    });
+    const itemsCollection = database.collection("products");
+
+    // Filtrado por marcas
+    const filterItems = () => {
+      const filteredCollection = itemsCollection.where(
+        "brand",
+        "==",
+        categoryId
+      );
+
+      filteredCollection.get().then((querySnapshot) => {
+        const filteredItems = querySnapshot.docs.map((element) => {
+          return { ...element.data(), id: element.id };
+        });
+        setWatchesToShow(filteredItems);
+      });
+    };
+
+    // Listar productos
+    const items = () => {
+      itemsCollection.get().then((querySnapshot) => {
+        if (querySnapshot.size === 0) {
+          alert("No hay resultados");
+        }
+        const items = querySnapshot.docs.map((element) => {
+          return { ...element.data(), id: element.id };
+        });
+        setWatchesToShow(items);
+      });
+    };
+
+    //
+    categoryId === undefined ? items() : filterItems();
   }, [categoryId]);
 
   return (
