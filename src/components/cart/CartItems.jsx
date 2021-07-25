@@ -22,7 +22,10 @@ export const CartItems = () => {
     <>
       <div className="cart">
         {aggregateItems.length === 0 ? (
-          <h3>No hay artículos agregados al carrito</h3>
+          <div>
+            <h3>No hay artículos agregados al carrito</h3>
+            <h4>¡Muchos productos te esperan!</h4>
+          </div>
         ) : (
           // Recorrer y mostrar array con relojes
           <div className="row">
