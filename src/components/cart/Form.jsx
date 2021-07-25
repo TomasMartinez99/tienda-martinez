@@ -125,12 +125,7 @@ export const Form = ({ aggregateItems, itemsPrice, clear }) => {
           <button
             className="formButton"
             type="submit"
-            disabled={
-              name === "" ||
-              phone === "" ||
-              mail === "" ||
-              mailConfirmation !== mail
-            }
+            disabled={name === "" || phone === "" || mail === ""}
           >
             Finalizar Compra
           </button>
