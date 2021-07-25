@@ -27,6 +27,7 @@ export const CartItems = () => {
           // Recorrer y mostrar array con relojes
           <div className="row">
             <div className="col-6 items-detail">
+              <h2>Mi carrito</h2>
               {/* Recorrer el array con los items agregados al carrito */}
               {aggregateItems.map((smartwatchAndCount) => (
                 <CartDetail

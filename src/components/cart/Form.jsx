@@ -122,19 +122,6 @@ export const Form = ({ aggregateItems, itemsPrice, clear }) => {
               enterKeyHint="next"
             />
           </p>
-          <p>
-            <label>Confirmar Mail:</label>
-            <br></br>
-            <input
-              value={mailConfirmation}
-              onChange={(e) => setMailConfirmation(e.target.value)}
-              placeholder="ejemplo@ejemplo.com"
-              id="mail"
-              type="email"
-              autoComplete="email"
-              enterKeyHint="done"
-            />
-          </p>
           <button
             className="formButton"
             type="submit"

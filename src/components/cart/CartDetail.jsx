@@ -25,7 +25,6 @@ export const CartDetail = (props) => {
   return (
     <>
       <div>
-        <h2>Mi carrito</h2>
         <img src={pictureUrl} alt={alt} />
         <div className="detail">
           <h3>{title}</h3>
