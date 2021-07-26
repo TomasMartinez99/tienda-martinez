@@ -12,11 +12,11 @@ export const ItemCount = ({ stock, itemCount, setItemCount }) => {
   return (
     <div className="count">
       <div>
-        <button className="btn-menos" onClick={(e) => decrementar()}>
+        <button className="btnMenos" onClick={(e) => decrementar()}>
           -
         </button>
         <h2> {itemCount} </h2>
-        <button className="btn-mas" onClick={(e) => incrementar()}>
+        <button className="btnMas" onClick={(e) => incrementar()}>
           +
         </button>
       </div>

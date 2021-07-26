@@ -22,14 +22,14 @@ export const CartItems = () => {
     <>
       <div className="cart">
         {aggregateItems.length === 0 ? (
-          <div>
+          <div className="carritoVacio">
             <h3>No hay artículos agregados al carrito</h3>
             <h4>¡Muchos productos te esperan!</h4>
           </div>
         ) : (
           // Recorrer y mostrar array con relojes
           <div className="row">
-            <div className="col-6 items-detail">
+            <div className="col-6 itemsDetail">
               <h2>Mi carrito</h2>
               {/* Recorrer el array con los items agregados al carrito */}
               {aggregateItems.map((smartwatchAndCount) => (

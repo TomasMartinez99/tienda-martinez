@@ -20,13 +20,17 @@
         padding-bottom: 7em;
         width: 100%;
 
-        .ver-mas {
+        .verMas {
             background-color: $color-secundario;
             text-decoration: none;
             color: #fff;
             padding: 0.2em 0.8em 0.2em 0.8em;
             margin-bottom: 1em;
             border-radius: 999px;
+            transition: all 0.3s ease;
+            &:hover {
+                opacity: 0.94;
+            }
         }
 
         /* Items del inicio */
@@ -98,10 +102,10 @@
                         margin: 0;
                     }
             
-                    .btn-menos {
+                    .btnMenos {
                         border-radius: 20px 0px 0px 20px;
                     }
-                    .btn-mas {
+                    .btnMas {
                         border-radius: 00px 20px 20px 0px;
                     }
             
@@ -146,7 +150,7 @@
                     color: #fff;
                 }
             }
-            .cancelar-confirmar-container {
+            .cancelarConfirmarContainer {
                 margin-left: 44px;
                 .btn-confirmar {
                     margin-left: 1em;
@@ -169,7 +173,7 @@
             overflow: hidden;
             height: 23em;
 
-            .img-product {
+            .imgProduct {
                 overflow: hidden;
                 img {
                     transition: all 0.3s ease;

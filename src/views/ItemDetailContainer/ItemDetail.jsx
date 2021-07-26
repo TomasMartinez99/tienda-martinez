@@ -10,7 +10,7 @@ export const Item = (props) => {
   return (
     <article className="itemDetail col-12">
       {/* Imagen del producto */}
-      <div className="img-product col-5">
+      <div className="imgProduct col-5">
         <img src={itemRender.pictureUrl} alt={itemRender.alt} />
       </div>
       {/* Detalle del producto */}
@@ -46,7 +46,7 @@ export const ItemDetail = (props) => {
               />
             </>
           ) : (
-            <div className="cancelar-confirmar-container">
+            <div className="cancelarConfirmarContainer">
               <button className="btn" onClick={() => setVisible(true)}>
                 Cancelar
               </button>

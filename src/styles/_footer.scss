@@ -3,7 +3,7 @@ footer {
     padding: 3em 0em; 
     background-color: $color-primario;
 
-    .nombre-tienda {
+    .nombreTienda {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -23,10 +23,10 @@ footer {
             width: 2em;
             border-radius: 3px;
             font-size: 1.8em;
-            margin: 0px 20px;
+            margin: 0px 1.25em;
             transition: all 0.3s ease;
             &:hover {
-                opacity: 0.2;
+                opacity: 0.4;
             }
         }
     }

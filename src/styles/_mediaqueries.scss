@@ -106,7 +106,7 @@
                 font-size: 0.875rem;
             }
 
-            .carrito-contenedor {
+            .carritoContenedor {
                 position: relative;
                 transition: all 0.3s ease;
                 cursor: pointer;
@@ -141,7 +141,7 @@
                 }
             }
 
-            .carrito-contenedor {
+            .carritoContenedor {
                 .contador {
                     width: 14px;
                     height: 14px;
@@ -200,6 +200,37 @@
             }
         }
     }
+    .main {
+        .smartwatchesContainer {
+            /* Items del inicio */
+            .item {
+                margin: 20px;
+                width: 14em;
+                height: 17em;
+            }
+        }
+    }
+    footer {
+        height: 6em;
+        padding: 2.4em 0em; 
+    
+        .nombreTienda {
+            p {
+                color: #fff;
+                margin: 0;
+                padding: 0;
+                font-size: 0.8em;
+            }
+        }
+    
+        .redes {
+            i {
+                width: 2em;
+                font-size: 1.8em;
+                margin: 0px 0.8em;
+            }
+        }
+    }
 }
 
 /* max-width: 500px */
@@ -212,7 +243,7 @@
                 }
             }
 
-            .carrito-contenedor {
+            .carritoContenedor {
                 .fa-shopping-bag {
                     color: #fff;
                     font-size: 1.6em;

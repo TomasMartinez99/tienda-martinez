@@ -10,7 +10,7 @@ export const Item = (props) => {
       <img src={smartwatch.pictureUrl} alt={smartwatch.alt} />
       <h3>{smartwatch.title}</h3>
       <h4>${smartwatch.price}</h4>
-      <Link className="ver-mas" to={`/item/${smartwatch.id}`}>
+      <Link className="verMas" to={`/item/${smartwatch.id}`}>
         Ver más
       </Link>
     </article>
