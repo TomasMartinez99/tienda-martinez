@@ -47,7 +47,7 @@ export const Form = ({ aggregateItems, itemsPrice, clear }) => {
             id: item.smartwatch.itemToShow.id,
             title: item.smartwatch.itemToShow.name,
             price: item.smartwatch.itemToShow.price,
-            itemCount: item.smartwatch.itemToShow.itemCount,
+            qty: item.itemCount,
           };
         });
 
@@ -57,6 +57,7 @@ export const Form = ({ aggregateItems, itemsPrice, clear }) => {
           date: firebase.firestore.Timestamp.fromDate(new Date()),
           total: itemsPrice,
         });
+
         batch.commit().then(() => {
           database
             .collection("orders")
@@ -76,7 +77,7 @@ export const Form = ({ aggregateItems, itemsPrice, clear }) => {
   return (
     <>
       {redirect ? (
-        alert("Orden realizada con éxito")
+        alert(`Orden realizada con éxito ${orderNumber}`)
       ) : (
         <form onSubmit={createOrder}>
           <p>

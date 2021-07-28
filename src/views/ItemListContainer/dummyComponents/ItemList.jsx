@@ -1,5 +1,6 @@
-import React from "react";
-import Item from "./Item";
+import { React } from "react";
+import { Item } from "./Item";
+import { Loader } from "../../../components/loader/Loader";
 
 // Utilizo Destructuring en la línea 5
 export const ItemList = ({ watchesToShow }) => {
@@ -7,7 +8,9 @@ export const ItemList = ({ watchesToShow }) => {
     // Maps (Se usa para recorrer un array)
     <>
       {watchesToShow.length === 0 ? (
-        <h3>Cargando...</h3>
+        <div className="LoaderContainer">
+          <Loader />
+        </div>
       ) : (
         // Recorrer y mostrar array con relojes
         <div className="row">

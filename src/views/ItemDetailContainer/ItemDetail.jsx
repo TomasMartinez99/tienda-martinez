@@ -59,9 +59,6 @@ export const ItemDetail = (props) => {
               </Link>
             </div>
           )}
-
-          {/* ARREGLAR */}
-          {/* <Link to="/">Volver atrás</Link> */}
         </div>
       </div>
     </div>

@@ -10,6 +10,18 @@
         margin-bottom: -80px;
     }
 
+    .LoaderContainer {
+        display: flex;
+        justify-content: center;
+        img {
+            width: 200px;
+        }
+        .loader {
+            margin-bottom: 7em;
+            margin-top: 7em;
+        }
+    }
+
     .smartwatchesContainer {
         display: flex;
         flex-direction: row;
@@ -151,7 +163,7 @@
                 }
             }
             .cancelarConfirmarContainer {
-                margin-left: 44px;
+                margin-left: 110px;
                 .btn-confirmar {
                     margin-left: 1em;
                     background: $color-primario;
