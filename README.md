@@ -1,4 +1,4 @@
-# Readme Tienda Online Timeshop - Proyecto Curso ReactJS CoderHouse
+## Readme Tienda Online Timeshop - Proyecto Curso ReactJS CoderHouse
 
 ## Descripción
 
