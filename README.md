@@ -12,15 +12,15 @@ Al entrar al detalle del producto se puede agregar la cantidad deseada por el us
 - Para el estilado del proyecto se usó **SCSS** y **Bootstrap**.
 - Los datos de los productos y las órdenes generadas en el carrito se almacenan en **Firebase**.
 
+## Demo
+
+<img src="https://media.giphy.com/media/VBRQ5kb3y6Ouh9JXHN/giphy.gif" alt="animación agregado de item al carrito">
+<br>
+<img src="https://media.giphy.com/media/THYwYgauUrf9dO1Jue/giphy.gif" alt="animación formulario y compra exitosa">
+
 ## Deploy
 
 <a href="https://gifted-northcutt-98918e.netlify.app"> Live Site </a>
-
-## Demo
-
-<img src="https://media2.giphy.com/media/fW8zzuyMB4suNE6BUP/giphy.gif" alt="gif de agregado de items al carrito">
-<br>
-<img src="https://media2.giphy.com/media/4ay2UFTZZsTFEZtfCi/giphy.gif" alt="gif de formulario y compra exitosa">
 
 ## Instalación
 

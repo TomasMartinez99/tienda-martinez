@@ -21,8 +21,6 @@ export const CartComponentProvider = ({ children }) => {
 
     // Condición para saber si el item está agregado
     if (found) {
-      alert("Item duplicado");
-
       const sum = found.itemCount;
       found.itemCount = sum + itemCount;
 
