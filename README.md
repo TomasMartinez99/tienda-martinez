@@ -29,7 +29,7 @@ El usuario al acceder al carrito de compra puede eliminar el artículo no desead
 
 ## Deploy
 
-<a href="https://gifted-northcutt-98918e.netlify.app"> Visitar sitio </a>
+<a href="https://tomasmartinez99.github.io/tienda-martinez/"> Visitar sitio </a>
 
 ## Instalación
 
