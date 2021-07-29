@@ -19,11 +19,12 @@ El usuario al acceder al carrito de compra puede eliminar el artículo no desead
   <img src="https://media.giphy.com/media/VBRQ5kb3y6Ouh9JXHN/giphy.gif" alt="animación agregado de item al carrito">
   <br>
 - Compra de item, y con código de seguimiento de la orden
+  <br>
   <img src="https://media.giphy.com/media/THYwYgauUrf9dO1Jue/giphy.gif" alt="animación formulario y compra exitosa">
 
 ## Deploy
 
-<a href="https://gifted-northcutt-98918e.netlify.app"> Live Site </a>
+<a href="https://gifted-northcutt-98918e.netlify.app"> Visitar sitio </a>
 
 ## Instalación
 
