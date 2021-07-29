@@ -4,8 +4,7 @@ import CartDetail from "./CartDetail";
 import { Form } from "./Form";
 
 export const CartItems = () => {
-  const { aggregateItems, setAggregateItems } = useContext(CartContext);
-  const { setQuantity } = useContext(CartContext);
+  const { aggregateItems } = useContext(CartContext);
   const { clear } = useContext(CartContext);
   const [total, setTotal] = useState(0);
 
