@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/tienda-martinez/static/css/main.ecc75ed1.chunk.css",
+    "main.js": "/tienda-martinez/static/js/main.e87fd3ab.chunk.js",
+    "main.js.map": "/tienda-martinez/static/js/main.e87fd3ab.chunk.js.map",
+    "runtime-main.js": "/tienda-martinez/static/js/runtime-main.1bf8b6b8.js",
+    "runtime-main.js.map": "/tienda-martinez/static/js/runtime-main.1bf8b6b8.js.map",
+    "static/css/2.61b4cb56.chunk.css": "/tienda-martinez/static/css/2.61b4cb56.chunk.css",
+    "static/js/2.01c87171.chunk.js": "/tienda-martinez/static/js/2.01c87171.chunk.js",
+    "static/js/2.01c87171.chunk.js.map": "/tienda-martinez/static/js/2.01c87171.chunk.js.map",
+    "static/js/3.0613ccfe.chunk.js": "/tienda-martinez/static/js/3.0613ccfe.chunk.js",
+    "static/js/3.0613ccfe.chunk.js.map": "/tienda-martinez/static/js/3.0613ccfe.chunk.js.map",
+    "index.html": "/tienda-martinez/index.html",
+    "static/css/2.61b4cb56.chunk.css.map": "/tienda-martinez/static/css/2.61b4cb56.chunk.css.map",
+    "static/css/main.ecc75ed1.chunk.css.map": "/tienda-martinez/static/css/main.ecc75ed1.chunk.css.map",
+    "static/js/2.01c87171.chunk.js.LICENSE.txt": "/tienda-martinez/static/js/2.01c87171.chunk.js.LICENSE.txt",
+    "static/media/loader.f1b77848.gif": "/tienda-martinez/static/media/loader.f1b77848.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1bf8b6b8.js",
+    "static/css/2.61b4cb56.chunk.css",
+    "static/js/2.01c87171.chunk.js",
+    "static/css/main.ecc75ed1.chunk.css",
+    "static/js/main.e87fd3ab.chunk.js"
+  ]
+}
