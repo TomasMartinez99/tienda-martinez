@@ -38,3 +38,7 @@ Para ejecutar el proyecto se deben seguir los siguientes pasos:
 - git clone https://github.com/TomasMartinez99/tienda-martinez.git
 - npm i
 - npm start
+
+---
+
+## permalink: /index.html
