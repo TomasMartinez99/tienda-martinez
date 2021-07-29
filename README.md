@@ -2,7 +2,7 @@
 
 ## Descripción
 
-El ecommerce está ambientado en "smartwatches" en dónde se puede observar en el inicio de la página todos los productos disponibles en la tienda con sus respectivos títulos, precios y botón para ver más del producto. A su vez en la barra de navegación nos encontramos con el logo de la tienda, un buscador, el carrito, botón de inicar sesíon, enlaces de inicio y las marcas de relojes que actúan como link para acceder a ver que productos hay en la misma.
+El ecommerce está ambientado en "Smartwatches" en dónde se puede observar en el inicio de la página todos los productos disponibles en la tienda con sus respectivos títulos, precios y botón para "ver más" del producto. A su vez en la barra de navegación nos encontramos con el logo de la tienda, un buscador (maquetado), el carrito, botón de inicar sesíon (maquetado), enlaces de inicio y las marcas de relojes que actúan como link para acceder a ver que productos hay en la misma.
 
 Al entrar al detalle del producto se puede agregar la cantidad deseada por el usuario al carrito. En el carrito se puede eliminar algun item si es necesario, ver la cantidad total a gastar, y se puede generar la orden de compra obteniendo un Id único para el seguimiento de la orden.
 
@@ -14,9 +14,11 @@ Al entrar al detalle del producto se puede agregar la cantidad deseada por el us
 
 ## Demo
 
-<img src="https://media.giphy.com/media/VBRQ5kb3y6Ouh9JXHN/giphy.gif" alt="animación agregado de item al carrito">
-<br>
-<img src="https://media.giphy.com/media/THYwYgauUrf9dO1Jue/giphy.gif" alt="animación formulario y compra exitosa">
+- Agregado del item al carrito
+  <img src="https://media.giphy.com/media/VBRQ5kb3y6Ouh9JXHN/giphy.gif" alt="animación agregado de item al carrito">
+  <br>
+- Compra de item, y con código de seguimiento de la orden
+  <img src="https://media.giphy.com/media/THYwYgauUrf9dO1Jue/giphy.gif" alt="animación formulario y compra exitosa">
 
 ## Deploy
 
