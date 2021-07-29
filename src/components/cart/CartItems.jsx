@@ -13,7 +13,7 @@ export const CartItems = () => {
   useEffect(() => {
     // Uso del método "reduce"
     const res = aggregateItems.reduce((accumulator, item) => {
-      return accumulator + item.smartwatch.itemToShow.price * item.itemCount;
+      return accumulator + item.smartwatch.price * item.itemCount;
     }, 0);
     setTotal(res);
   }, [aggregateItems]);
@@ -34,7 +34,7 @@ export const CartItems = () => {
               {/* Recorrer el array con los items agregados al carrito */}
               {aggregateItems.map((smartwatchAndCount) => (
                 <CartDetail
-                  key={smartwatchAndCount.smartwatch.itemToShow.id}
+                  key={smartwatchAndCount.smartwatch.id}
                   {...smartwatchAndCount}
                 />
               ))}

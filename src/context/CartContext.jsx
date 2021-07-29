@@ -8,14 +8,15 @@ export const CartComponentProvider = ({ children }) => {
   // Cantidad de los productos agregados
   const [quantity, setQuantity] = useState(0);
   const [aggregateItems, setAggregateItems] = useState([]);
+  const [orderData, setOrderData] = useState("");
 
   const addItem = (smartwatch, itemCount) => {
-    const smartwatchId = smartwatch.itemToShow.id;
+    const smartwatchId = smartwatch.id;
     const dupAggregateItems = [...aggregateItems];
 
     // Buscamos si coincide el id del item a agregar con los que tenemos agregados
     const found = dupAggregateItems.find((element) => {
-      return element.smartwatch.itemToShow.id === smartwatchId;
+      return element.smartwatch.id === smartwatchId;
     });
 
     // Condición para saber si el item está agregado
@@ -36,6 +37,11 @@ export const CartComponentProvider = ({ children }) => {
   const clear = () => {
     setAggregateItems([]);
     setQuantity(0);
+    setOrderData("");
+  };
+
+  const updateOrderData = (id) => {
+    setOrderData(id);
   };
 
   return (
@@ -47,6 +53,7 @@ export const CartComponentProvider = ({ children }) => {
         quantity,
         setQuantity,
         clear,
+        updateOrderData,
       }}
     >
       {/* Componentes que van a tener acceso */}

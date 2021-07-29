@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { Redirect } from "react-router-dom";
 import { database } from "../../firebase/firebase";
+import { CartContext } from "../../context/CartContext";
 import firebase from "firebase/app";
 import "firebase/firestore";
 
 export const Form = ({ aggregateItems, itemsPrice, clear }) => {
+  const { updateOrderData } = useContext(CartContext);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [mail, setMail] = useState("");
@@ -22,8 +25,30 @@ export const Form = ({ aggregateItems, itemsPrice, clear }) => {
     const itemsToUpdate = database.collection("products").where(
       firebase.firestore.FieldPath.documentId(),
       "in",
-      aggregateItems.map((i) => i.smartwatch.itemToShow.id)
+      aggregateItems.map((i) => i.smartwatch.id)
     );
+
+    const createOrder = (buyer) => {
+      const newOrder = {
+        buyer: buyer,
+        items: aggregateItems,
+        date: firebase.firestore.Timestamp.fromDate(new Date()),
+        total: itemsPrice,
+      };
+      return newOrder;
+    };
+
+    const addNewOrder = (buyer) => {
+      const newOrder = createOrder(buyer);
+      const orders = database.collection("orders");
+      try {
+        orders.add(newOrder).then((doc) => {
+          updateOrderData(doc.id);
+        });
+      } catch (error) {
+        console.log("Error al generar comprar");
+      }
+    };
 
     itemsToUpdate.get().then((querySnapshot) => {
       const batch = database.batch();
@@ -40,24 +65,6 @@ export const Form = ({ aggregateItems, itemsPrice, clear }) => {
       });
 
       if (outOfStock.length === 0) {
-        const newOrderReference = database.collection("orders").doc();
-
-        const orderItems = aggregateItems.map((item) => {
-          return {
-            id: item.smartwatch.itemToShow.id,
-            title: item.smartwatch.itemToShow.name,
-            price: item.smartwatch.itemToShow.price,
-            qty: item.itemCount,
-          };
-        });
-
-        batch.set(newOrderReference, {
-          buyer: buyer,
-          items: orderItems,
-          date: firebase.firestore.Timestamp.fromDate(new Date()),
-          total: itemsPrice,
-        });
-
         batch.commit().then(() => {
           database
             .collection("orders")
@@ -66,6 +73,7 @@ export const Form = ({ aggregateItems, itemsPrice, clear }) => {
             .get()
             .then((querySnapshot) => {
               setOrderNumber(querySnapshot.docs[0].id);
+              addNewOrder(buyer);
               setRedirect(true);
               clear();
             });
@@ -77,7 +85,7 @@ export const Form = ({ aggregateItems, itemsPrice, clear }) => {
   return (
     <>
       {redirect ? (
-        alert(`Orden realizada con éxito ${orderNumber}`)
+        <Redirect to={`/purchaseMade/${orderNumber}`} />
       ) : (
         <form onSubmit={createOrder}>
           <p>

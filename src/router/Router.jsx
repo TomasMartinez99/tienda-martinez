@@ -3,6 +3,7 @@ import { Switch, Route, Link } from "react-router-dom";
 import { ItemListContainer } from "../views/ItemListContainer/ItemListContainer";
 import { ItemDetailContainer } from "../views/ItemDetailContainer/ItemDetailContainer";
 import { CartItems } from "../components/cart/CartItems";
+import { PurchaseMade } from "../views/PurchaseMade";
 
 export const Router = () => {
   return (
@@ -18,6 +19,11 @@ export const Router = () => {
 
       {/* Carrito con items */}
       <Route exact path="/cart" component={CartItems} />
+
+      {/* Orden realizada */}
+      <Route path="/purchaseMade/:orderId">
+        <PurchaseMade />
+      </Route>
 
       {/* Página no encontrada */}
       <Route path="/">

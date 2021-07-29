@@ -2,9 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // Componente Render
-export const Item = (props) => {
-  const smartwatch = props;
-
+export const Item = ({ smartwatch }) => {
   return (
     <article className="item col-3">
       <img src={smartwatch.pictureUrl} alt={smartwatch.alt} />

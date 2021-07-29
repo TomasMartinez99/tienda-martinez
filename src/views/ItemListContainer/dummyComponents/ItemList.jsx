@@ -18,7 +18,7 @@ export const ItemList = ({ watchesToShow }) => {
 
           <div className="smartwatchesContainer">
             {watchesToShow.map((smartwatch, i) => (
-              <Item key={i} {...smartwatch} />
+              <Item key={i} smartwatch={smartwatch} />
             ))}
           </div>
         </div>

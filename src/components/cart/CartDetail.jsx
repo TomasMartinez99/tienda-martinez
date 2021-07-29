@@ -5,20 +5,20 @@ export const CartDetail = (props) => {
   const { aggregateItems, setAggregateItems } = useContext(CartContext);
   const { quantity, setQuantity } = useContext(CartContext);
   const itemCount = props.itemCount;
-  const title = props.smartwatch.itemToShow.title;
-  const price = props.smartwatch.itemToShow.price;
-  const pictureUrl = props.smartwatch.itemToShow.pictureUrl;
-  const itemId = props.smartwatch.itemToShow.id;
-  const alt = props.smartwatch.itemToShow.alt;
+  const title = props.smartwatch.title;
+  const price = props.smartwatch.price;
+  const pictureUrl = props.smartwatch.pictureUrl;
+  const itemId = props.smartwatch.id;
+  const alt = props.smartwatch.alt;
 
   // Función para eliminar item
   const removeItem = (itemId) => {
     const selectRemoveItem = aggregateItems.find(
-      (aggregateItem) => aggregateItem.smartwatch.itemToShow.id === itemId
+      (aggregateItem) => aggregateItem.smartwatch.id === itemId
     );
     setQuantity(quantity - selectRemoveItem.itemCount);
     setAggregateItems(
-      aggregateItems.filter((item) => item.smartwatch.itemToShow.id !== itemId)
+      aggregateItems.filter((item) => item.smartwatch.id !== itemId)
     );
   };
 

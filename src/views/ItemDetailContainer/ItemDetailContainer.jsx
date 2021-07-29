@@ -4,10 +4,7 @@ import { useParams } from "react-router-dom";
 import { database } from "../../firebase/firebase";
 
 export const ItemDetailContainer = () => {
-  // Hook useState
-  const [itemToShow, setItemToShow] = useState([]);
-
-  // useParams (parámetros que recibo por url)
+  const [prodById, setProdById] = useState([]);
   const { itemId } = useParams();
 
   // useEffect de Firebase
@@ -22,7 +19,7 @@ export const ItemDetailContainer = () => {
           alert("No hay resultados");
           return;
         }
-        setItemToShow({ id: doc.id, ...doc.data() });
+        setProdById({ id: doc.id, ...doc.data() });
       })
       .catch((error) => {
         console.log("Error buscando items", error);
@@ -31,7 +28,7 @@ export const ItemDetailContainer = () => {
 
   return (
     <div className="main">
-      <ItemDetail itemToShow={itemToShow} />
+      <ItemDetail smartwatch={prodById} />
     </div>
   );
 };

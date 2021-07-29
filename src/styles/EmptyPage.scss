@@ -1,0 +1,51 @@
+.emptyPage {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5em;
+    text-align: center;
+    h1 {
+        margin-top: 1em;
+        margin-bottom: 2em;
+        font-weight: 800;
+        font-size: 2em;
+        color: #001b2e;
+    }
+    button {
+        background-color: #ffff;
+        border: #294c60 1px solid;
+        border-radius: 50px;
+        cursor: pointer;
+        color: #294c60;
+        font-size: 0.8em;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        height: 4em;
+        padding-left: 2em;
+        padding-right: 2em;
+        margin-bottom: 7em;
+        &:hover {
+            background-color: #294c60;
+            border: #294c60 1px solid;
+        }
+    }
+    p {
+    color: #294c60;
+    font-weight: 600;
+    width: 40%;
+    margin-bottom: 2em;
+    }
+  }
+  
+  /*mobile  */
+  @media screen and (max-width: 640px) {
+    .emptyPage h1 {
+      line-height: 1em;
+      width: 90%;
+      font-size: 1.8em;
+    }
+    .emptyPage p {
+      width: 70%;
+    }
+  }

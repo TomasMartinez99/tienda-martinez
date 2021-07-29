@@ -3,27 +3,24 @@ import { Link } from "react-router-dom";
 import ItemCount from "../../components/ItemCount";
 import { CartContext } from "../../context/CartContext";
 
-// Render del reloj
-export const Item = (props) => {
-  const itemRender = props.itemToShow;
-
+// Render del item
+export const Item = ({ smartwatch }) => {
   return (
     <article className="itemDetail col-12">
       {/* Imagen del producto */}
       <div className="imgProduct col-5">
-        <img src={itemRender.pictureUrl} alt={itemRender.alt} />
+        <img src={smartwatch.pictureUrl} alt={smartwatch.alt} />
       </div>
       {/* Detalle del producto */}
       <div className="col-7">
-        <h3>{itemRender.title}</h3>
-        <h4>${itemRender.price}</h4>
+        <h3>{smartwatch.title}</h3>
+        <h4>${smartwatch.price}</h4>
       </div>
     </article>
   );
 };
 
-export const ItemDetail = (props) => {
-  const smartwatch = props;
+export const ItemDetail = ({ smartwatch }) => {
   const [visible, setVisible] = useState(true);
   const [itemCount, setItemCount] = useState(1);
   const { addItem } = useContext(CartContext);
@@ -31,7 +28,7 @@ export const ItemDetail = (props) => {
   return (
     <div className="row">
       <div className="smartwatchesContainer">
-        <Item {...smartwatch} />
+        <Item smartwatch={smartwatch} />
         {/* Condición Agregar carrito */}
         <div className="addCart">
           {visible ? (
@@ -40,7 +37,7 @@ export const ItemDetail = (props) => {
                 Agregar al carrito
               </button>
               <ItemCount
-                stock={5}
+                stock={smartwatch.stock}
                 itemCount={itemCount}
                 setItemCount={setItemCount}
               />
