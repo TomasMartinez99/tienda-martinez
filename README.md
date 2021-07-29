@@ -15,6 +15,7 @@ El usuario al acceder al carrito de compra puede eliminar el artículo no desead
 ## Demo
 
 - Agregado del item al carrito
+  <br>
   <img src="https://media.giphy.com/media/VBRQ5kb3y6Ouh9JXHN/giphy.gif" alt="animación agregado de item al carrito">
   <br>
 - Compra de item, y con código de seguimiento de la orden
