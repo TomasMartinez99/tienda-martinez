@@ -23,6 +23,7 @@ El usuario al acceder al carrito de compra puede eliminar el artículo no desead
   <img src="https://media.giphy.com/media/THYwYgauUrf9dO1Jue/giphy.gif" alt="animación formulario y compra exitosa">
   <br>
 - Funcionamiento de Firebase
+  <br>
   <img src="https://media.giphy.com/media/7HoL74fpd7t7hXvPRR/giphy.gif" alt="animación firebase">
   <br>
 
