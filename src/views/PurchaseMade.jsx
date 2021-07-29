@@ -9,7 +9,6 @@ export const PurchaseMade = () => {
     <div>
       <EmptyPage
         className="purchaseMade"
-        altText="compra exitosa"
         h1="¡Gracias por Tu Compra!"
         link="/"
         extraInfo={`El código de tu pedido es ${orderId}, pronto recibirás un mail confirmando el envío.`}

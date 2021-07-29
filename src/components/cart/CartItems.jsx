@@ -28,7 +28,7 @@ export const CartItems = () => {
         ) : (
           // Recorrer y mostrar array con relojes
           <div className="row">
-            <div className="col-6 itemsDetail">
+            <div className="col-12 col-md-6 itemsDetail">
               <h2>Mi carrito</h2>
               {/* Recorrer el array con los items agregados al carrito */}
               {aggregateItems.map((smartwatchAndCount) => (
@@ -48,7 +48,7 @@ export const CartItems = () => {
               </div>
             </div>
 
-            <section className="col-6 form">
+            <section className="col-12 col-md-6 form">
               <div className="userInfo">
                 <h2>Mis Datos</h2>
                 <Form

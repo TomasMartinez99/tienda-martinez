@@ -46,7 +46,7 @@ export const Form = ({ aggregateItems, itemsPrice, clear }) => {
           updateOrderData(doc.id);
         });
       } catch (error) {
-        console.log("Error al generar comprar");
+        alert("Error al generar la compra");
       }
     };
 

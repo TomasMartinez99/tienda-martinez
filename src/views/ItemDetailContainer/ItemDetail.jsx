@@ -8,11 +8,11 @@ export const Item = ({ smartwatch }) => {
   return (
     <article className="itemDetail col-12">
       {/* Imagen del producto */}
-      <div className="imgProduct col-5">
+      <div className="imgProduct col-6 col-lg-5">
         <img src={smartwatch.pictureUrl} alt={smartwatch.alt} />
       </div>
       {/* Detalle del producto */}
-      <div className="col-7">
+      <div className="detail col-4 col-lg-7">
         <h3>{smartwatch.title}</h3>
         <h4>${smartwatch.price}</h4>
       </div>
