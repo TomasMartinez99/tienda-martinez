@@ -4,7 +4,7 @@
 
 El ecommerce está ambientado en "Smartwatches" en dónde se puede observar en el inicio de la página todos los productos disponibles en la tienda con sus respectivos títulos, precios y botón para "ver más" del producto. A su vez en la barra de navegación nos encontramos con el logo de la tienda, un buscador (maquetado), el carrito, botón de inicar sesíon (maquetado), enlaces de inicio y las marcas de relojes que actúan como link para acceder a ver que productos hay en la misma.
 
-Al entrar al detalle del producto se puede agregar la cantidad deseada por el usuario al carrito. En el carrito se puede eliminar algun item si es necesario, ver la cantidad total a gastar, y se puede generar la orden de compra obteniendo un Id único para el seguimiento de la orden.
+El usuario al acceder al carrito de compra puede eliminar el artículo no deseado o vaciar el carrito. También se detalla la cantidad total a pagar, y se puede generar la orden de compra obteniendo un id único para el seguimiento de la orden.
 
 ## Tecnologías
 
