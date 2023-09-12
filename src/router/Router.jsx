@@ -9,7 +9,7 @@ export const Router = () => {
   return (
     <Switch>
       {/* Inicio */}
-      <Route exact path="/" component={ItemListContainer} />
+      <Route path="/" component={ItemListContainer} />
 
       {/* Marcas */}
       <Route exact path="/category/:categoryId" component={ItemListContainer} />

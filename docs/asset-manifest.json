@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/tienda-martinez/static/css/main.ecc75ed1.chunk.css",
-    "main.js": "/tienda-martinez/static/js/main.e87fd3ab.chunk.js",
-    "main.js.map": "/tienda-martinez/static/js/main.e87fd3ab.chunk.js.map",
+    "main.js": "/tienda-martinez/static/js/main.5638b5dd.chunk.js",
+    "main.js.map": "/tienda-martinez/static/js/main.5638b5dd.chunk.js.map",
     "runtime-main.js": "/tienda-martinez/static/js/runtime-main.1bf8b6b8.js",
     "runtime-main.js.map": "/tienda-martinez/static/js/runtime-main.1bf8b6b8.js.map",
     "static/css/2.61b4cb56.chunk.css": "/tienda-martinez/static/css/2.61b4cb56.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.61b4cb56.chunk.css",
     "static/js/2.01c87171.chunk.js",
     "static/css/main.ecc75ed1.chunk.css",
-    "static/js/main.e87fd3ab.chunk.js"
+    "static/js/main.5638b5dd.chunk.js"
   ]
 }
